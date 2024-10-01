@@ -12,12 +12,16 @@
     --color-dark: #7777;
     --green-default: #8bfc52;
     --color-sidebar: #eee;
+    --white-default: white;
     --color-dark: #222;
     --green-h2: #256206;
     --screen-smallBg: #232323;
     --green-default: #8bfc52;
     --color-dark: #222;
     --screen-smallBg: #232323;
+    --color-usina: #FF8800;
+    --border-usina: #B34E00;
+    --light-usina: #dad7d5;
 }
 
 .logo{
@@ -32,20 +36,62 @@ body{
     min-height: 100vh;
     background-color: var(--color-dark);
 }
+/* ESTILOS GLOBAIS*/
+
+.btnIcon{
+    display: inline-block;
+    padding: auto 3px;
+    height: 25px;
+    width: 25px;
+}
+
+
+
+/*estilo default para buttons*/
+button{
+    height: 35px;
+    min-width: 155px;
+    padding: 3px 20px;
+   color: var(--gray-light);
+   border: 2px groove;
+   border-color: var(--gray-ligth);
+    border-radius: 22px;
+    background-color: var(--button-default);
+    margin:  auto;
+}
+button:hover{
+    font-weight: 700;
+    color: var(--color-usina);
+    letter-spacing: 2px;
+    border-radius: 12px;
+}
+
+
+button .btnIcon{
+    padding: auto 3px;
+    height: 25px;
+    width: 25px;
+}
+/* FIM ESTILOS GLOBAIS*/
 
 .header{
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    max-height: 60px;
-    background-color: var(--color-extremes);
-    color: var(--color-dark);
+    max-height: 80px;
+    background-color: var(--color-dark);
+    color: var(--color-extremes);
     display: flex;
     flex-flow: row wrap;
     align-items: center;
     justify-content: space-around;
+    width: 100%;
     z-index: 975;
+}
+
+.header h1 img{
+    margin-bottom: 1rem;
 }
 
 /* iniciando aside*/
@@ -121,7 +167,7 @@ body{
     max-width: 40rem;
     min-width: 35rem;
     height: 100%;
-    background: linear-gradient(to top, rgba(34, 32, 41, 1), rgba(34, 32, 41, .8)) ,url(../img/nav-bg.jpeg) center no-repeat;
+    background: var(--color-dark);
     background-size: cover;
     display: flex;
     flex-direction: column;
@@ -167,7 +213,7 @@ body{
     content: "";
     width: 0rem;
     height: .1rem;
-    background-color: var(--green-default);
+    background-color: var(--color-usina);
     position: absolute;
     top: 1rem;
     left: -4rem;
@@ -178,7 +224,7 @@ body{
     content: "";
     width: 0rem;
     height: .1rem;
-    background-color: var(--green-default);
+    background-color:var(--color-usina);
     position: absolute;
     top: 1rem;
     right: -4rem;
@@ -186,7 +232,7 @@ body{
 }
 
 .navigation-link:hover {
-    color:  var(--green-default);
+    color:  var(--color-usina);
 }
 
 .navigation-link:hover::before,
@@ -245,7 +291,7 @@ body{
 
 /* inicio section hero*/
 
-.hero{
+.hero, .hero2{
     background: url('./../assets/images/bg001_cover.png');
     background-size: cover;
     background-position: center;
@@ -253,62 +299,90 @@ body{
 }
 
 .hero .header__section{
-    padding: 2rem;
+
     margin: 30px auto;
     padding-top: 30px;
-    font-size: 2rem;
     margin-top: 20vh;
     text-align: center;
-    background-color:rgba(255 255 255 0.2);
-    color: var(--green-h2);
+    background-color: var(--color-content);
     min-height: 60%;
 display: flex;
 flex-flow: column wrap;
 align-items: space-around;
 justify-content: space-around;
 border-radius: 22px;
+width: 100%;
+}
+.hero .header__section{
+    padding-top:10px;
+    font-size: 3.4rem;
+    margin-top:25vh;
+    text-align: center;
+    background-color: var(--color-content);
+}
+.heading__h2{
+    font-size: 4rem;
+    color: var(--color-usina);
+    text-shadow: 2px 2px 1px rgb(0, 0, 0);
+
 }
 
-.hero .heading__h2{
-    font-size: 2.8rem;
-}
-
-.hero .header__section p, .hero .header__section h2 span{
-    color: var(--color-dark);
-    padding-top: 30px;
-    font-size: 1.5rem;
-}
-
-
-.header__hero-btns a{
-    min-width: 80px;
-    text-decoration: none;
-    border-radius: 22px;
-    background-color:  var(--green-h2);
-    border: none;
-    font-weight: 700;
-    letter-spacing: 2px;
+.heading__h2 .s0{
+    text-shadow: none;
     font-size: 1.2rem;
-    padding: 0.51rem 2rem;
-    color: var(--color-sidebar);
-    margin-right: 10px;
-    margin-top: -30px;
-    margin-bottom: 30px;
+    margin-bottom: 50px ;
+    color: var(--color-dark);
+
+} 
+
+.hero .header__section {
+    color: var(--color-dark);
+    padding-top: 10px;
+    font-size: 1rem;
 }
 
-.hero .header__hero-btns a:hover{
-    background-color: var(--green-default);
+
+    
+.hero__btn{
+    max-width: 110px;
+    font-size: 1.2rem;
+    height: 50px;
+    background-color: var(--color-dark);
+    color: var(--color-usina);
 }
+
+
+.hero__btn:hover{
+    background-color: var(--border-usina);
+    font-weight: 700;
+    height: 50px;
+    color: var(--color-sidebar);
+}
+
 
 /* final section hero*/
 
+/*section hero2*/
+.hero2 header{
+    margin-top: 5vh;
+    padding-top: 10vh;
 
+}
+
+.hero2 header h2{
+    color: var(--color-sidebar);
+}
+.hero2 div{
+    padding-top: 9vh;
+    background-color: var(--color-usina);
+    min-height:55vh;
+}
+
+.hero2__content{
+    height: 50%;
+}
 /* inicio section-1 e section-2*/
 
-.section-1 .heading__h2, .section-2 .heading__h2{
-    font-size: 2rem;
-    margin: 30px auto;
-}
 
 .section-1 .container__section{
     display: grid;
@@ -373,7 +447,8 @@ padding-left: 8rem;
     width: 80px;
     height: 30px;
     border-radius: 22px;
-    background-color: #7cbd5c;
+    background-color: var(--color-usina);
+    border: 2px solid var(--border-usina);
     border: none;
     font-weight: 700;
     letter-spacing: 2px;
