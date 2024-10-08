@@ -13,15 +13,15 @@
     --green-default: #8bfc52;
     --color-sidebar: #eee;
     --white-default: white;
-    --color-dark: #222;
-    --green-h2: #256206;
+    --color-dark:#0F330A;
+    --green-h2: #62c630;
     --screen-smallBg: #232323;
     --green-default: #8bfc52;
-    --color-dark: #222;
     --screen-smallBg: #232323;
-    --color-usina: #FF8800;
-    --border-usina: #B34E00;
-    --light-usina: #dad7d5;
+    --color-usina: #008e15;
+    --usina-color: #2bbf35;
+    --border-usina: #004328;
+    --light-usina: #ffffff;
 }
 
 .logo{
@@ -45,6 +45,21 @@ body{
     width: 25px;
 }
 
+.coletivo .active{
+    background-color: var(--green-h2);
+    padding:0.21rem;
+}
+.coletivo .nav-link{
+    color: var(--green-h2)!important;
+}
+.coletivo .nav-link:hover{
+    background-color: var(--green-h2)!important;
+    color: var(--color-sidebar)!important;
+}
+
+.dropdown-item:active{
+    background-color: var(--green-h2)!important;
+}
 
 
 /*estilo default para buttons*/
@@ -52,15 +67,15 @@ button{
     height: 35px;
     min-width: 155px;
     padding: 3px 20px;
-   color: var(--gray-light);
+   color: var(--color-sidebar);
    border: 2px groove;
-   border-color: var(--gray-ligth);
+   border-color: var(--color-sidebar);
     border-radius: 22px;
     background-color: var(--button-default);
     margin:  auto;
 }
 button:hover{
-    font-weight: 700;
+ 
     color: var(--color-usina);
     letter-spacing: 2px;
     border-radius: 12px;
@@ -69,8 +84,8 @@ button:hover{
 
 button .btnIcon{
     padding: auto 3px;
-    height: 25px;
-    width: 25px;
+    height: 27px;
+    width: 27px;
 }
 /* FIM ESTILOS GLOBAIS*/
 
@@ -81,7 +96,7 @@ button .btnIcon{
     right: 0;
     max-height: 80px;
     background-color: var(--color-dark);
-    color: var(--color-extremes);
+    color: var(--green-default);
     display: flex;
     flex-flow: row wrap;
     align-items: center;
@@ -139,12 +154,14 @@ button .btnIcon{
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    
 }
 
 .social-link {
     font-size: 2rem;
     color: #777;
     transition: color .3s;
+    
 }
 
 .social-link:hover {
@@ -167,8 +184,6 @@ button .btnIcon{
     max-width: 40rem;
     min-width: 35rem;
     height: 100%;
-    background: var(--color-dark);
-    background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -180,15 +195,13 @@ button .btnIcon{
 .navigation-heading {
     font-family: 'Josefin Sans', sans-serif;
     font-size: 3.5rem;
-    font-weight: 300;
     letter-spacing: .2rem;
-    color: var(--green-default);
     text-align: center;
 }
 .navigation-list {
     list-style: none;
     padding: 0;
-    height: 28rem;
+    height: 48rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -197,6 +210,7 @@ button .btnIcon{
 
 .navigation-item {
     position: relative;
+
 }
 
 .navigation-link {
@@ -207,15 +221,17 @@ button .btnIcon{
     text-transform: uppercase;
     text-decoration: none;
     transition: color .5s;
+    margin-bottom: 10px;
+    background-color: #08170e;;
 }
 
 .navigation-link::before {
     content: "";
     width: 0rem;
     height: .1rem;
-    background-color: var(--color-usina);
+    background-color: var(--green-default);
     position: absolute;
-    top: 1rem;
+    top: 1.51rem;
     left: -4rem;
     transition: width .5s cubic-bezier(1, 0, 0, 1);
 }
@@ -224,7 +240,7 @@ button .btnIcon{
     content: "";
     width: 0rem;
     height: .1rem;
-    background-color:var(--color-usina);
+    background-color:var(--green-default);
     position: absolute;
     top: 1rem;
     right: -4rem;
@@ -232,7 +248,8 @@ button .btnIcon{
 }
 
 .navigation-link:hover {
-    color:  var(--color-usina);
+    color:  var(--green-default);
+    background-color:rgb(48, 76, 5);
 }
 
 .navigation-link:hover::before,
@@ -275,15 +292,12 @@ button .btnIcon{
     padding-top: 10px;
     padding-bottom: 40px;
  padding-left: 5rem;
- max-width: 1440px;
- padding-right: 2rem;
+ padding-right:5rem;
 }
 .main .section{
-    overflow: scroll;
     height: 100%;
     width: 100%;
-    padding: 0 5%;
-    margin: -5vh auto;
+    padding: auto;
     text-align: center;
     color: var(--color-dark);
     min-height: 100vh;
@@ -322,7 +336,7 @@ width: 100%;
 }
 .heading__h2{
     font-size: 4rem;
-    color: var(--color-usina);
+    color: var(--green-default);
     text-shadow: 2px 2px 1px rgb(0, 0, 0);
 
 }
@@ -338,23 +352,24 @@ width: 100%;
 .hero .header__section {
     color: var(--color-dark);
     padding-top: 10px;
-    font-size: 1rem;
 }
 
 
     
 .hero__btn{
     max-width: 110px;
-    font-size: 1.2rem;
+    font-size: 2.2rem;
     height: 50px;
     background-color: var(--color-dark);
-    color: var(--color-usina);
+    color: var(--color-sidebar);
+    font-weight: 600;
+    letter-spacing: 0.2rem;
 }
 
 
 .hero__btn:hover{
     background-color: var(--border-usina);
-    font-weight: 700;
+    font-weight: 900;
     height: 50px;
     color: var(--color-sidebar);
 }
@@ -363,24 +378,61 @@ width: 100%;
 /* final section hero*/
 
 /*section hero2*/
-.hero2 header{
-    margin-top: 5vh;
-    padding-top: 10vh;
+.hero2 {
+margin-top: 5vh;
+    text-align: center;
+    background-color: var(--usina-color);
+display: flex;
+flex-flow: column wrap;
+align-items: space-around;
+justify-content: space-around;
+border-radius: 22px;
+min-width:90%;
+}
 
+.hero2 header{
+    height: 27vh;
+    padding-top: 5vh;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.hero2 header p{
+    font-size: 1.23rem;
+    background-color: var(--white-default);
+    padding: 1rem 0.51rem;
+    border-radius:8px;
 }
 
 .hero2 header h2{
-    color: var(--color-sidebar);
-}
-.hero2 div{
-    padding-top: 9vh;
-    background-color: var(--color-usina);
-    min-height:55vh;
+    font-size: 3rem;
+    margin: 2rem;
+    text-shadow: 2px 1px 0 rgb(0, 0, 0);
+    color: var(--color-usina);
 }
 
-.hero2__content{
-    height: 50%;
+.hero2__container{
+    background-color: var(--color-usina);
+padding-top: -4rem;
+margin-left: 2rem;
+margin-right: 2rem;
+height:56vh;
+padding-bottom: 1rem;
+border-radius: 8px;
 }
+
+.hero2__container .card{
+    width: 100%;
+    min-height: 330px;
+    border: none;
+    margin-top: -3rem;
+}
+
+.hero2 .card .card-header{
+    background-color: var(--color-usina)!important;
+    color: white;
+}
+
 /* inicio section-1 e section-2*/
 
 

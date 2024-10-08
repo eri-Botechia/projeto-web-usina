@@ -27,6 +27,7 @@
     .menu-icon {
         margin-top: 3rem;
         cursor: pointer;
+
     }
     
     .line {
@@ -53,12 +54,14 @@
         flex-direction: column;
         justify-content: space-evenly;
         align-items: center;
+
     }
     
     .social-link {
         font-size: 2rem;
         color: #777;
         transition: color .3s;
+        
     }
     
     .social-link:hover {
@@ -76,13 +79,12 @@
     .navigation {
         position: fixed;
         width: 100%;
-        padding-top: 4rem;
-        padding-bottom: 4rem;
+
         left: -36rem;
         max-width: 28rem;
         min-width: 27rem;
         height: 100%;
-        background: var(--color-dark);
+        background: #0F330A;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -96,9 +98,9 @@
         font-size: 2.5rem;
         font-weight: 300;
         letter-spacing: .2rem;
-        color: var(--color-usina);
         text-align: center;
         padding: 1rem;
+        color: var(--green-default);
     }
 
     /* end of navigation */
@@ -114,7 +116,7 @@
         padding-bottom: 60px;
      padding-left: 6rem;
      padding-right: 1rem;
-     width: 100%;
+     width: 99%;
     }
     .main .section{
         overflow-x: hidden;
@@ -124,7 +126,7 @@
         padding: 0 5%;
         margin: -15vh auto;
         text-align: center;
-        color: var(--color-dark);
+        color: #232323;
         min-height: 100vh;
     }
     
@@ -148,8 +150,8 @@
 
     .heading__h2{
         font-size: 4rem;
-        color: var(--color-usina);
-        text-shadow: 2px 2px 1px rgb(0, 0, 0);
+        color: var(--green-default);
+        text-shadow: 2px 2px 0px rgb(2, 86, 5);
     
     }
     
@@ -171,14 +173,17 @@
         font-size: 0.98rem;
         height:50px;
         border-radius: 8px;
+        font-size: 1.5rem;
+ 
     }
     
     
     .hero__btn:hover{
-        background-color: var(--border-usina);
+
         font-weight: 700;
         height: 50px;
         border-radius: 8px;
+        color: var(--color-extremes);
     }
     
     /* inicio section-1 e section-2*/
@@ -191,7 +196,7 @@
         position: fixed;
         left: 0;
         right: 0;
-        height: 60px;
+        height: 50px;
         bottom: 0;
         background-color: var(--color-dark);
         color: var(--color-extremes);
