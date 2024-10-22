@@ -10,6 +10,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.deleteItem = exports.putItem = exports.postItem = exports.getItem = exports.getAll = exports.getSlash = void 0;
+const IdGenerator_1 = require("../../services/IdGenerator");
 const getSlash = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     res.status(200).json({ message: 'Hello, CLUB' });
 });
@@ -25,8 +26,15 @@ const getItem = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
 exports.getItem = getItem;
 const postItem = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const { body } = req;
-    const { idPost: id = null, authorPost: author, emailPost: email, contentPost: content } = body;
-    if (!id || id == null) {
+    const { idPost: id = undefined, authorPost: author, checkAnonymous: checkedOk, emailPost: email, contentPost: content } = body;
+    if (!id || id == undefined) {
+        const idGenerator = new IdGenerator_1.IdGenerator();
+        const idPost = idGenerator.generate();
+        return idPost;
+    }
+    if (checkedOk == true) {
+        const authorPost = 'Anonymous';
+        const emailPost = '';
     }
     res.status(201).json({ message: 'CREATE', body });
 });
