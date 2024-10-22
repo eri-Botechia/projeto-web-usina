@@ -1,0 +1,23 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    font-size: 16px;
+    font-family: "M PLUS 2", sans-serif;
+}
+
+:root{
+    --color-bgDefault:#121214;
+}
+
+body{
+    display: grid;
+    min-height: 100vh;
+    max-width: 1fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    background-color: var(--color-bgDefault);
+}

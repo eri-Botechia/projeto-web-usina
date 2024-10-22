@@ -22,7 +22,6 @@
     <title>MAKETADO</title>
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/animista.css">
-    <link rel="stylesheet" href="styles/bootstrap.min.css">
     <link rel="stylesheet" href="styles/globals.css">
     <link rel="stylesheet" href="styles/containers.css">
     <link rel="stylesheet" href="styles/custom.css">
@@ -32,7 +31,7 @@
  <!-- header -->
  <header class="header">
     <h1>
-        <img src="assets/brand/logo.svg" class="logo logo1" alt="logo projeto usina eco-cultural"/>
+        <img src="./assets/brand/logo.svg" class="logo logo1" alt="logo projeto usina eco-cultural"/>
      
     </h1>
 </header>
@@ -79,14 +78,15 @@
             <div class="navigation-header">
                 <h2 class="navigation-heading">
                     <span>Usina</span>
-                    <br> ECO-CULTURAL</h2>
+                    <br> ECO-CULTURAL
+                </h2>
             </div>
 
             <ul class="navigation-list">
                 <li class="navigation-item">
                     <button type="button" class="navigation-link" id="btnHome">
                         <span>
-                            <img src="assets/brand/icons/i004_homeIcon-greenVar.svg" alt="icone para button com conteudo dinamico de home" class="btnIcon"/>
+                            <img src="assets/brand/icons/i004_homeIcon-greenVar.svg" alt="ícone para button com conteudo dinamico de home" class="btnIcon"/>
                             Home
                         </span>
                     </button>
@@ -176,36 +176,35 @@
    
     <!--main-->
     <main class="main" id="main__content">
-  
+        <section class="section section__contact" id="idContact">
+            <form action="POST" class="form">
+                <fieldset>
+                    <legend>
+                        <h2>Contato</h2>
+                        <input type="text" name="name" id="name" placeholder="Nome" required>
+                        <input type="email" name="email" id="email" placeholder="Email" required>
+                        <textarea name="message" id="message" placeholder="Mensagem" required></textarea>
+                        <button type="submit" class="btn">Enviar</button>
+                    </legend>
+                </fieldset>
+            </form>
+        </section>
     </main>
     <!--end of main-->
 
     <!--footer-->
     <footer class="footer">
         <div class="footer__container">
-           
-
-            <!--footer form #01-->
-
-                <form>
-                    <div>
-                    <label id="emailNewsletter" class="footer-list-label">
-                     <span class="st">
-                        Newsletter
-                     </span>
-                     Newsletter
-                     <img src="assets/brand/icons/i006_newsletterVarOrange.svg" alt="icon para newsletter"/>
-                </label>
-                    <input title="Assine o Newsletter" type="email" placeholder="seu-email@email.com" name="emailNewsletter" id="emailNewsletter"/>
-                    <button type="button">Inscrever</button>
+                <button type="button" id="btnNewsletterFooter" class="btnNewsletter">
+                    CLICK NEWSLETTER
+                    <img src="assets/brand/icons/i006_newsletterVarOrange.svg" alt="icon para newsletter"/>
+                </button>
             </div>
-                </form>
-        </div>
     </footer>
     <!--end of footer-->
 
     <!--scripts-->
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script type="module" src="usina_modules//app.js"></script>
+
+    <script type="module" src="./usina_modules/app.js"></script>
     </body>
     </html>
