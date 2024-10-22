@@ -109,3 +109,9 @@ main section ul li {
     border: 3px solid var(--border-usina);
     background-color: var(--color-usina);
 }
+
+
+.form{
+  width: 70%;
+  background-color: var(--color-usina);
+}
