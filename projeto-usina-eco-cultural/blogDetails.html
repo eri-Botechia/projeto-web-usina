@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+2:wght@100..900&display=swap" rel="stylesheet">
 
     <title>Bootstrap demo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="stylesheets/normalize.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="stylesheets/globals.css">
@@ -97,7 +98,90 @@
       </header>
      
       <main class="container bg-light p-5">
-       
+
+        <!--SECTION PARA MODAL , FICA LOCALIZADO COMO PRIMEIRA PARTE DO MAIN POR FUNCIONAMENTO DE Z-INDEX-->
+        <section
+                    class="modal mt-5"
+                    id="modalNewsletter"
+                    tabindex="-1"
+                    aria-hidden="true"
+                    aria-labelledby="label-modal-1"
+                    
+                  >
+                    <div class="modal-dialog">
+                  
+                      <div class="modal-content">
+                   <!-- Heading Modal-->	  
+                        <div class="modal-header">
+                          <span class="text-secondary font-weight-bold">NEWSLETTER ECO-CULTURAL</span>
+                          
+                          <button class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
+                        </div>
+          
+                        
+                        <div class="modal-body">
+                            <div class="modal-body-header">
+                              <span><strong class="font-weight-bold text-secondary">É GRÁTIS</strong>, receber noticias  no e-mail com o:</span>
+                              <br/>
+                              <h5> <strong class="font-weight-bold text-success">NEWSLETTER ECO-CULTURAL </strong></h5>
+                              <p class="small text-secondary">Prencha o Formulário para receber todas as novidades em forma de boletim de notícias em seu e-mail e nos ajude a saber como nos conheceu!</p>
+                            </div>
+                            <div class="modal-body-content">
+                              <form>
+                                <div class="form-group">
+                                  <label for="inputReceiverUser">Nome</label>
+                                  <input type="email" class="form-control" id="inputReceiverUser" name="inputReceiverUser" aria-describedby="emailHelp" placeholder="ex: 'John Doe'">
+                                </div>
+                                <div class="form-group">
+                                  <label for="inputReceiverEmail">Email</label>
+                                  <input type="email" class="form-control" id="inputReceiverEmail" name="inputReceiverEmail" aria-describedby="emailHelp" placeholder="ex: 'john.doe@google.com'">
+                                </div>
+
+                                <div class="form-group my-4">
+                                  <label for="inputReceiverMeetUsBy">Como você nos encontrou?</label>
+                                
+                                    <!--name="inputReceiverMeetUsBy" id="inputReceiverMeetUsBy" -->
+                                    <div class="container">
+                                     
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="checkbox" id="meetUsLinkedin" value="linkedin" checked="false">
+                                          <label class="form-check-label" for="meetUsLinkedin">Linkedin</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="checkbox" id="meetUsFacebook" value="facebook" checked="false">
+                                          <label class="form-check-label" for="meetUsFacebook">Facebook</label>
+                                      </div>
+                                      <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="meetUsLinkedin" value="linkedin" checked="false">
+                                        <label class="form-check-label" for="meetUsLinkedin">Linkedin</label>
+                                      </div>
+                                      <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="meetUsFacebook" value="facebook" checked="false">
+                                        <label class="form-check-label" for="meetUsFacebook">Facebook</label>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="form-group">
+                                <button type="submit" class="btn btn-primary mt-4 mb-4 mx-2">Enviar</button>
+                                <button type="delete" class="btn btn-danger mt-4 mb-4 mx-2">Limpar Dados</button>
+                              </form>
+                              </div>
+                            </div>
+                            <div class="modal-body-footer">
+                              <small id="emailHelp" class="form-text text-muted">É PRIVADO, seus dados estão seguros e não são compartidos.</small> 
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <div class="list-social">
+                              <a href="https://www.google.com" target="_blank" rel="noopener noreferrer" class="link-social"><i class="fa-brands fa-instagram"></i></a>
+                              <a href="https://www.google.com" target="_blank" rel="noopener noreferrer" class="link-social"><i class="fa-brands fa-instagram"></i></a>
+                              <a href="https://www.google.com" target="_blank" rel="noopener noreferrer" class="link-social"><i class="fa-brands fa-instagram"></i></a>
+                              <a href="https://www.google.com" target="_blank" rel="noopener noreferrer" class="link-social"><i class="fa-brands fa-instagram"></i></a>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
       
        
       
@@ -246,9 +330,23 @@
         </div>
       
       </main>
-      <footer class="fixed fixed-bottom bg-light p-4 container-fluid">
-          <div class="container bg-light">
-            <a class="navbar-brand" href="#">Fixed bottom</a>
+      <footer class="fixed fixed-bottom bg-light p-1 container-fluid">
+          <div class="container">
+          
+            <!--AQUI VAI BOTAO DO MODAK-->
+            <div class="container">
+              <div class="row ">
+                <div class="col">
+                  <button 
+                    class="btn btn-orange"
+                    data-bs-toggle="modal"
+                    data-bs-target="#modalNewsletter"
+                  >
+                    Abrir Modal 1
+                </button>
+                <!--O DIV DO MODAL FOI INSERIDO COMO PRIMEIRA PARTE DO MAIN PARA PODER TER UM Z-INDEX FUNCIONAL-->
+                </div>      
+                </div>
           </div>
       
       </footer>

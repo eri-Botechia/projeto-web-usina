@@ -1,6 +1,6 @@
-import { templates } from "./templates";
+import { renderTemplates } from "./templates/templates.js";
 
-const useFetch = async (urlBase, path = "", headers = {}) => {
+/*const useFetch = async (urlBase, path = "", headers = {}) => {
     const url = new URL(`${urlBase}/${path}`);
     try {
         const response = await fetch(url, headers);
@@ -54,7 +54,6 @@ const fetchRender = async (urlBase, path = "", reqMethod = "GET", targetId = "co
 // Altere a URL se necessário
 fetchRender('https://v2.jokeapi.dev/joke', 'Any?lang=pt&amount=10');
 
-templates()
 
 
 const date = moment();
@@ -66,3 +65,6 @@ const dateEmpthyHTML = document.getElementById('datetimeEmpthy')
 if(dateEmpthyHTML){
     dateEmpthyHTML.innerHTML = currentDate
 }
+*/
+
+renderTemplates()
