@@ -27,7 +27,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
-const usersController = __importStar(require("../../controllers/usersController"));
+const usersController = __importStar(require("../../controllers/api/usersController"));
 const router = express_1.default.Router();
 router.get('/', usersController.getSlash);
 router.get('/list', usersController.getAll);

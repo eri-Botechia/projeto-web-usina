@@ -1,0 +1,29 @@
+@media screen and (max-width: 920px) {
+    .hero{
+        margin-top: 80px;
+        min-height: 60vh;
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    
+
+    .hero-blog-header{
+        display:grid;
+        height: 60vh;
+        grid-template-columns:1fr;
+        grid-template-rows: 1fr 1fr;
+      
+    }
+
+    .hero-blog-header .carrousel-item, .slider-title{
+        display: flex;
+        flex-flow: column wrap;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+    
+
+}
