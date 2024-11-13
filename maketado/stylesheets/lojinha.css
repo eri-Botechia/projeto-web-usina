@@ -1,0 +1,41 @@
+#content{
+    position: fixed;
+    top:10vh;
+    bottom: 4vh;
+    right:5rem;
+    left: 5rem;
+    margin-left: 3rem;
+    height: 80vh;
+    width: 0.95fr;
+    background-image: url("./../assets/images/bg003_cover002.png");
+    background-size: contain;
+    background-position: center center;
+    border-radius: 22px;
+}
+.banner{
+    min-height: 55vh;
+    background: green;
+    border-radius: 22px;
+    font-size: 1.5rem;
+    text-align: center;
+    color:white ;
+}
+
+.banner h2{
+    font-size: 4rem;
+    color: white;
+    text-align: center;
+    margin: 30px auto;
+    font-weight: 700;
+}
+
+ .container__btn{
+    height: 25vh;
+    background-color: azure;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    border-radius: 22px;
+    margin: 20px 2.5%;
+}

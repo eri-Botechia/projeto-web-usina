@@ -1,0 +1,14 @@
+.coletivo {
+    width: 100%;
+    margin-top:10vh;
+    padding-top: 1rem;
+    padding-bottom : 2.5vh;
+    background: url('./../assets/images/bg001__hero.png');
+    background-size: cover;
+    border-radius: 22px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    font-size: 1.2rem;
+    text-align: center;
+}
+
