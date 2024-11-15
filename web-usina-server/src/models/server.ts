@@ -14,14 +14,15 @@ import docsRouter from '../routes/docs/docsRouter';
 export class Server {
     private app: Application;
     private port: string;
+    private mainPaths ={
+        main: '/'
+    }
     private apiPaths = {
         api: '/api',
         users: '/api/users',
         posts: '/api/posts'
     };
-    private mainPaths = {
-        main: '/'
-    };
+
     private docsPaths = {
         docs: '/docs'
     };

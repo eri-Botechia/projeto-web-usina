@@ -1,3 +1,0 @@
-# MAKETADO PROJETO USINA ECO-CULTURAL PII IMT
-
-## Projeto Usina ECO-CULTURAL in building process ⚠️

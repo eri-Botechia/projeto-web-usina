@@ -14,13 +14,13 @@ const usersRouter_1 = __importDefault(require("../routes/api/usersRouter"));
 const docsRouter_1 = __importDefault(require("../routes/docs/docsRouter"));
 class Server {
     constructor() {
+        this.mainPaths = {
+            main: '/'
+        };
         this.apiPaths = {
             api: '/api',
             users: '/api/users',
             posts: '/api/posts'
-        };
-        this.mainPaths = {
-            main: '/'
         };
         this.docsPaths = {
             docs: '/docs'
