@@ -1,4 +1,4 @@
-import lis
+
 
 export const LojinhaPage = `
 <section class="col-12 " id="contentId">

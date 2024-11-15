@@ -1,5 +1,4 @@
-import { renderTemplates } from "./templates/index.js";
-
+import { renderTemplates } from "./templates/templates.js";
 export const main = () => {
     renderTemplates();
 }
