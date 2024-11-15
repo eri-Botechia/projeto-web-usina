@@ -1,5 +1,9 @@
 import { renderTemplates } from "./templates/templates.js";
 
+
+export const main = () => {
+    renderTemplates()
+}
 /*const useFetch = async (urlBase, path = "", headers = {}) => {
     const url = new URL(`${urlBase}/${path}`);
     try {

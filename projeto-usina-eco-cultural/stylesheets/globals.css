@@ -237,3 +237,27 @@ footer{
 .margin-slider{
 padding-top:120px!important;
 }
+
+.gallery-list {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-around;
+    list-style-type: none;
+    background: var(--color-orangeDark);
+    margin-bottom: 80px;
+  }
+  
+  .gallery-item {
+    margin: 30px auto;
+    margin-top: 30px;
+    padding: 2rem 0;
+    background: var(--color-orangeLight);
+    border: 2px solid var(--color-grayLight);
+    border-radius: 22px;
+  }
+  
+
+  .contact-form{
+    margin-bottom: 100px;
+  }
