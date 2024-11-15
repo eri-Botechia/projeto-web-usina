@@ -1,9 +1,12 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.USER_ROLES = void 0;
-var USER_ROLES;
-(function (USER_ROLES) {
-    USER_ROLES["ADMIN"] = "admin";
-    USER_ROLES["USER"] = "user";
-})(USER_ROLES || (exports.USER_ROLES = USER_ROLES = {}));
+exports.ROLES = void 0;
+var ROLES;
+(function (ROLES) {
+    ROLES["ROLE_1"] = "idealizador";
+    ROLES["ROLE_2"] = "admin";
+    ROLES["ROLE_3"] = "voluntario_geral";
+    ROLES["ROLE_4"] = "voluntario_especifico";
+    ROLES["ROLE_5"] = "cadastrado";
+})(ROLES || (exports.ROLES = ROLES = {}));
 //# sourceMappingURL=enums.js.map
