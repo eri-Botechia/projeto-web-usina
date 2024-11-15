@@ -2,7 +2,7 @@ import { BlogPage } from "./pages/blogPage.js";
 import { ColetivoPage } from "./pages/coletivoPage.js";
 import { ContatoPage } from "./pages/contatoPage.js";
 import { HomePage } from "./pages/homePage.js";
-import { modalNewsletter } from "./sections/modalNewsletter.js";
+import { SupportersPage } from "./pages/supportersPage.js";
 
 const renderApp = (data2Inject) => {
     document.addEventListener('DOMContentLoaded', () => {
@@ -65,6 +65,12 @@ export const renderTemplates = () => {
         template:   ContatoPage
     };
 
+    const changeBtn7 = "btnNav7";
+    const dataSupporters = {
+        targetId: 'contentId',
+        template:   SupportersPage
+    };
+
     renderApp(dataDefault);
     renderView(dataHome, changeBtn1);
     renderView(dataColetivo, changeBtn2);
@@ -72,5 +78,6 @@ export const renderTemplates = () => {
 
 
     renderView(dataContato, changeBtn6);
+    renderView(dataSupporters, changeBtn7);
 };
 
