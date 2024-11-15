@@ -5,3 +5,12 @@ export enum ROLES{
     ROLE_4= 'voluntario_especifico',
     ROLE_5= 'cadastrado',
 }
+
+export enum POST_CATEGORIES {
+    BLOG="BLOG",
+    EVENTOS="EVENTOS",
+    COMENTARIO="COMENTARIO", 
+    PRODUTO="PRODUTO",
+    GALERIA="GALERIA" 
+ }
+ 
