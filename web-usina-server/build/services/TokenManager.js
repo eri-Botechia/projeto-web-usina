@@ -3,20 +3,10 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.TokenManager = exports.USER_ROLES = void 0;
+exports.TokenManager = void 0;
 const jsonwebtoken_1 = __importDefault(require("jsonwebtoken"));
 const dotenv_1 = __importDefault(require("dotenv"));
 dotenv_1.default.config();
-var USER_ROLES;
-(function (USER_ROLES) {
-    USER_ROLES["NORMAL"] = "NORMAL";
-    USER_ROLES["ADMIN"] = "ADMIN";
-    USER_ROLES["BUYER"] = "BUYER";
-    USER_ROLES["EMPLOYER"] = "EMPLOYER";
-    USER_ROLES["OWNER"] = "OWNER";
-    USER_ROLES["STUDENT"] = "STUDENT";
-    USER_ROLES["INSTRUCTOR"] = "INSTRUCTOR";
-})(USER_ROLES || (exports.USER_ROLES = USER_ROLES = {}));
 class TokenManager {
     constructor() {
         this.createToken = (payload) => {
