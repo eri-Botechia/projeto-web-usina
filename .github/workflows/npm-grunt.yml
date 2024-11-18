@@ -4,7 +4,7 @@ on:
   push:
     branches: [ "main" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "new-5-branch" ]
 
 jobs:
   build:
@@ -23,6 +23,6 @@ jobs:
         node-version: ${{ matrix.node-version }}
 
     - name: Build
-      run: |
+      run: cd projeto-web-usina|
         npm install
         grunt
