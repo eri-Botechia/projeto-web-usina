@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="keywords" content="html, css, js, web-vainilla, maketado">
+    <meta name="description" content="Maketado inicial para site usina eco-cultural">
+
+    <!--favicon-->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <title>Maketado Usina Eco-Cultural</title>
+    <link rel="stylesheet" href="stylesheets/normalize.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/globals.css">
+    <link rel="stylesheet" href="styles/media.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/style.css">
+
+    <link rel="stylesheet" href="styles/media.css">
+</head>
+<body>
+<div class="container-fluid">
+    <header class="header">
+        <div class="header__box" id="header__box-1">
+            <h1 class="heading__h1">
+                <img src="./../assets/brand/logo.svg" alt="logo brand para navbar" class="logoNav">
+            </h1>
+        </div>
+        <div class="header__box" id="header__box-2">
+            <div class="container__buttons" id="authButtons">
+                <button id="btn__login">
+                    <img src="assets/brand/icons/i034-userColor1.svg" alt="icone para usuario sem login realizado">
+                    LOGIN
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <aside class="aside1">
+        <input type="checkbox" class="checkbox" id="click1" hidden>
+        <div class="sidebar">
+            <label for="click1">
+                <div class="menu-icon">
+                    <div class="line line-1"></div>
+                    <div class="line line-2"></div>
+                    <div class="line line-3"></div>
+                </div>
+            </label>
+            <ul class="aside1-list">
+                <li class="aside1-items aside1-item-1">
+                    <a href="https://www.google.com" target="_blank" rel="noopener noreferrer" class="aside1-links aside1-link-1">
+                        <img class="aside__images" src="assets/images/logo-1-html.svg" alt="img logo html">
+                    </a>
+                </li>
+                <li class="aside1-items aside1-item-2">
+                    <a href="https://www.google.com" target="_blank" rel="noopener noreferrer" class="aside1-links aside1-link-2">
+                        <img class="aside__images" src="assets/images/logo-1-html.svg" alt="img logo html">
+                    </a>
+                </li>
+                <li class="aside1-items aside1-item-3">
+                    <a href="https://www.google.com" target="_blank" rel="noopener noreferrer" class="aside1-links aside1-link-3">
+                        <img class="aside__images" src="assets/images/logo-1-html.svg" alt="img logo html">
+                    </a>
+                </li>
+            </ul>
+            <div class="year">
+                <p>2024</p>
+            </div>
+        </div>
+        <nav class="navigation">
+            <div class="navigation-header">
+                <h2 class="navigation-heading">
+                    <span>Usina</span>
+                    <br> ECO-CULTURAL
+                </h2>
+            </div>
+            <ul class="navigation-list">
+                <li class="navigation-item">
+                    <button type="button" class="navigation-link" id="btnHome">
+                            <span>
+                                <img src="assets/brand/icons/i004_homeIcon-greenVar.svg" alt="icone para button com conteudo dinamico de home" class="btnIcon">
+                                Home
+                            </span>
+                    </button>
+                </li>
+                <li class="navigation-item">
+                    <button type="button" class="navigation-link" id="btnColetivo">
+                            <span>
+                                <img src="assets/brand/icons/i011_coletivoIcon-greenVar.svg" alt="icone para button com conteudo dinamico sobre o coletivo" class="btnIcon">
+                                COLETIVO
+                            </span>
+                    </button>
+                </li>
+                <li class="navigation-item">
+                    <button type="button" class="navigation-link" id="btnHistoria">
+                            <span>
+                                <img src="assets/brand/icons/i021_historia-greenVar.svg" alt="icone para button com conteudo dinamico sobre Historia da Usina" class="btnIcon">
+                                HISTORIA
+                            </span>
+                    </button>
+                </li>
+                <li class="navigation-item">
+                    <button type="button" class="navigation-link" id="btnColab">
+                            <span>
+                                <img src="assets/brand/icons/i023_Colab-greenVar.svg" alt="icone para button com conteudo dinamico Colaboradores" class="btnIcon">
+                                COLABORE
+                            </span>
+                    </button>
+                </li>
+                <li class="navigation-item">
+                    <button type="button" class="navigation-link" id="btnShop">
+                            <span>
+                                <img src="assets/brand/icons/i025_Shop-greenVar.svg" alt="icone para button com conteudo dinamico da Lojinha" class="btnIcon">
+                                LOJINHA
+                            </span>
+                    </button>
+                </li>
+                <li class="navigation-item">
+                    <button type="button" class="navigation-link" id="btnEventos">
+                            <span>
+                                <img src="assets/brand/icons/i027_Calendario-greenVar.svg" alt="icone para button com conteudo dinamico da Lojinha" class="btnIcon">
+                                AGENDA
+                            </span>
+                    </button>
+                </li>
+                <li class="navigation-item">
+                    <button type="button" class="navigation-link" id="btnBlog">
+                            <span>
+                                <img src="assets/brand/icons/i002_blogIcon-greenVar.svg" alt="icone para button com conteudo dinamico de blog" class="btnIcon">
+                                Blog
+                            </span>
+                    </button>
+                </li>
+                <li class="navigation-item">
+                    <button type="button" class="navigation-link" id="btnImprensa">
+                            <span>
+                                <img src="assets/brand/icons/i030_Imprensa-greenVar.svg" alt="icone para button com conteudo dinamico de Imprensa" class="btnIcon">
+                                IMPRENSA
+                            </span>
+                    </button>
+                </li>
+                <li class="navigation-item">
+                    <button type="button" class="navigation-link" id="btnContato">
+                            <span>
+                                <img src="assets/brand/icons/i029_Contato-greenVar.svg" alt="icone para button com conteudo dinamico de Contato" class="btnIcon">
+                                CONTATO
+                            </span>
+                    </button>
+                </li>
+                <li class="navigation-item">
+                    <button type="button" class="navigation-link" id="btnParceiros">
+                            <span>
+                                <img src="assets/brand/icons/i033_Parceiros-greenVar.svg" alt="icone para button com conteudo dinamico de Parceiros" class="btnIcon">
+                                PARCEIROS
+                            </span>
+                    </button>
+                </li>
+            </ul>
+            <div class="copyright">
+                <p>&copy; 2024 - Usina ECO-CULTURAL</p>
+            </div>
+        </nav>
+    </aside>
+
+    <main class="main">
+        <div class="container" id="contentDinamic">
+            <section class="section sectionB-2">
+                <header class="header__section-b">
+                    <h2>CONFIRA NOSSOS EVENTOS</h2>
+                    <p>A usina é pra viver nossa cultura no nosso bairro e cuidar do nosso espaço!</p>
+                    <hr/>
+                </header>
+                <div class="filter__section col-12">
+                    <div class="row">
+                        <div class="col-sm-8 col-md-6 col-lg-4 form-control">
+                            <input type="nomeHtml" name="nomeHtml" id="nomeHtml">
+                        </div>
+                        <div class="col-sm-8 col-md-6 col-lg-4"></div>
+                        <div class="col-sm-8 col-md-6 col-lg-4"></div>
+                    </div>
+                </div>
+                <article  class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="img_avatar.png" alt="Avatar" style="width:300px;height:300px;">
+                        </div>
+                        <div class="flip-card-back">
+                            <h1>John Doe</h1>
+                            <p>Architect & Engineer</p>
+                            <p>We love that guy</p>
+                        </div>
+                    </div>
+
+                </article>
+            </section>
+        </div>
+    </main>
+    <aside class="aside2 ">
+        <input type="checkbox" class="checkbox1" id="click2" hidden>
+        <div class="sidebar1">
+            <label for="click2">
+                <div class="menu-icon1">
+                    <img src="assets/brand/icons/i037_cartIcon-Default.svg" alt="icone para carrinho">
+                </div>
+            </label>
+            <ul class="aside2-list">
+                <li class="aside2-items aside2-item-1">
+                    <a href="https://www.google.com" target="_blank" rel="noopener noreferrer" class="aside2-links aside2-link-1">
+                        <img class="aside__images" src="assets/brand/icons/i040_youtubeIcon.svg" alt="img logo canal youtube">
+                    </a>
+                </li>
+                <li class="aside2-items aside2-item-2">
+                    <a href="https://www.google.com" target="_blank" rel="noopener noreferrer" class="aside2-links aside2-link-2">
+                        <img class="aside__images" src="assets/brand/icons/i041_facebookIcon.svg" alt="img logo canal facebook">
+                    </a>
+                </li>
+                <li class="aside2-items aside2-item-3">
+                    <a href="https://www.google.com" target="_blank" rel="noopener noreferrer" class="aside2-links aside2-link-3">
+                        <img class="aside__images" src="assets/brand/icons/i039_twitterIcon.svg" alt="img logo html">
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <nav class="navigation1">
+            <div class="navigation1-header">
+                <h2 class="navigation1-heading">
+                    COMPRAS
+                </h2>
+            </div>
+
+            <div class="copyright">
+                <p>&copy; 2024 - Usina ECO-CULTURAL</p>
+            </div>
+        </nav>
+    </aside>
+    <footer class="footer">
+        <form>
+            <div>
+                <label id="inputNewsletterId" class="footer-list-label">
+                <input type="checkbox" id="inputNewsletter" name="inputNewsletter" value="newsletter"/>
+                Newsletter
+                </label>
+                <input title="Assine o Newsletter" type="email" placeholder="seu-email@email.com" name="emailNewsletter" id="emailNewsletter"/>
+                <button type="button">Assinar</button>
+            </div>
+        </form>
+        <div>
+
+        <ul>
+            <li>
+                <a href="https://wwww.linkedin.com/in/botechia-erika" target="_blank">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://wwww.github.com/eri-botechia" target="_blank">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+            </li>
+            <li>
+                <a href="mailto:botechia.official@gmail.com" target="_blank">
+                    <i class="fa fa-envelope"></i>
+                </a>
+            </li>
+        </ul>
+        </div>
+</div>
+</footer>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<!--<script type="module" src="project_modules/app.js"></script>-->
+</body>
+</html>

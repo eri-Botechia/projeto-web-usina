@@ -1,0 +1,92 @@
+header{
+    background: var(--color-white)!important;
+}
+
+.hero{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+    min-height: 30vh;
+    background-color: var(--color-white);
+}
+
+header section img{
+    object-fit: contain;
+    height: auto;
+    margin: 0 auto;
+}
+
+.h50vh .destaques{
+
+    display: flex;
+    flex-flow: column wrap-reverse;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--color-white);
+
+}
+.card{
+    min-height: 350px;
+    height: 100%;
+    max-height: 351px;
+    background-color: var(--color-white);
+}
+
+.aside-button-img{
+    
+    width: 100%;
+    max-width: 200px;
+    height: 25%;
+    max-height: 120px;
+    margin: 10px auto;
+    border-radius: 22px;
+    border: 2px solid var(--color-lightCream);
+}
+
+.blog-figure{
+    width: 95%;
+    margin: 10px 2.5%;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-white);
+    border-radius: 22px;
+}
+
+.blog-figure-img{
+    width: 75%;
+    margin: 7.5%;
+}
+.img-card-list{
+    width: 50%;
+    max-width:200px;
+    height:90%;
+    z-index: 0;
+    object-fit: contain;
+}
+
+
+.area4Commentary{
+    min-width:330px;
+    height: 100px;
+}
+
+.carousel-item img{
+    object-fit: contain;
+}
+
+
+.zSuper{
+    z-index: 1001;
+}
+
+
+.no-border {
+    border: 0;
+    box-shadow: none; /* You may want to include this as bootstrap applies these styles too */
+}
+
+

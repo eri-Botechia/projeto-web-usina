@@ -1,0 +1,44 @@
+@media screen and (max-width: 369px) {
+    body{
+        overflow-y: auto;
+    }
+
+
+
+    h1{
+        font-size: 1.2rem;
+        margin: 10px auto;
+    }
+
+    header a img {
+        width: 25px;
+        height: 25px;
+    }
+
+    main{
+        display: grid;
+        grid-template-columns: 70px auto;
+    }
+
+
+
+    section h4{
+        position: absolute;
+        margin-left: -50px;
+        z-index: 999!important;
+        margin-top: -25px;
+    }
+
+    main aside ul li img{
+        position: absolute;
+        padding: 0;
+        max-width: 60px;
+        height: 60px;
+        object-fit: contain;
+        left: 5px;
+        border-radius: 22px;
+        padding: 1rem;
+
+    }
+}
+

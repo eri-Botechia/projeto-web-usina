@@ -1,0 +1,268 @@
+/* ------------------estilo global para logoNav------------------- */
+.logoNav{
+    height: 90px;
+
+    border-radius: 8px;
+    width: auto;
+    margin: 5px auto;
+
+}
+/*estilo default para buttons*/
+button{
+    height: 30px;
+    min-width: 55px;
+    padding: 3px 20px;
+   border: 2px groove var(--color-dark2);
+   color: var(--color-dark1);
+    border-radius: 22px;
+    margin:  auto;
+    font-size: 1rem;
+    background-color: var(--color-orange1);
+
+}
+button:hover{
+    background-color: var(--color-orange3);
+    border-radius: 12px;
+    border-color: var(--color-orange1)!important;
+    color: var(--white-default);
+}
+
+button img{
+    padding: auto 3px;
+    max-height: 17px;
+    max-width: 17px;
+}
+
+.header button img{
+    background-color: white;
+    border-radius: 28px;
+}
+
+/* ---------------------FLIP CARD--------------------------- */
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 200px;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  }
+
+  /* This container is needed to position the front and back side */
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front {
+    background-color: #bbb;
+    color: black;
+  }
+
+  /* Style the back side */
+  .flip-card-back {
+    background-color: dodgerblue;
+    color: white;
+    transform: rotateY(180deg);
+  }
+
+
+
+.bodyPage{
+    display: grid;
+    max-height: 90vh;
+    overflow: hidden;
+    padding-top: 110px;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+.header {
+    max-width: 1440px;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 110px;
+    margin: 0 auto;
+    background-color:  var(--bg-extremes);
+}
+
+nav ul{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 110px;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    padding-left: 40px;
+    align-items: center;
+}
+
+
+nav ul li a{
+    color: black;
+    margin-left: 30px;
+    font-weight: 900;
+}
+
+
+.logoNav{
+    width: 90px;
+    height: 90px;
+}
+
+section header h2{
+    margin-bottom: 30px ;
+}
+
+.div__button{
+    margin: 30px auto;
+}
+
+.div__button a{
+    font-weight: 900;
+    color: black;
+    margin-right: 30px;
+}
+
+
+.main__hero{
+    overflow-y: hidden;
+}
+
+.section{
+    padding-top: 110px;
+    min-height: 100vh;
+    height: 100%;
+}
+
+
+
+footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    max-height: 60px;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    background-color: var(--bg-extremes);
+}
+
+
+footer ul{
+    display: flex;
+    height: 100%;
+    max-height: 60px;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    align-items: center;
+}
+
+
+header button img {
+    top: 10px;
+    right: 10px;
+    z-index: 11;
+    position: fixed;
+    z-index: 9999;
+    border-radius: 999;
+    max-width: 40px;
+
+}
+
+.main{
+    max-height: 100vh;
+    padding-top: 110px;
+    padding-bottom: 60px;
+}
+
+#myDiv{
+    position: fixed;
+    display: block;
+    flex-flow: row wrap;
+    min-width: 300px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    color: rgb(26, 26, 26);
+    padding: 2rem;
+    align-self: space-around;
+    display: none;
+    background-color: var(--bg-aside);
+    z-index: 999;
+}
+
+.hero{
+    text-align: center;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 1fr;
+    height: auto;
+}
+
+
+
+
+
+.hero{
+    display: flex;
+    flex-flow: row wrap;
+    text-align: center;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    max-width: 90%;
+    align-self: flex-start;
+    height: auto;
+    max-height: 85vh;
+    margin: 5% auto;
+}
+
+
+section header{
+    text-align: flex-end;
+    padding: 1rem;
+    padding-left: 2rem;
+    max-width: 450px;
+}
+
+.logoHero{
+    text-align: center;
+    max-height: 350px;
+    display: flex;
+    flex-flow: inline;
+    max-height: auto;
+    margin: auto;
+}
+
+
+footer a{
+    color: black;
+}
