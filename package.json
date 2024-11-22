@@ -1,0 +1,30 @@
+{
+  "name": "projeto-web-usina",
+  "version": "1.0.0",
+  "description": "projeto-web-usina",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./index.js",
+    "dev": "nodemon ./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eri-Botechia/projeto-web-usina.git"
+  },
+  "author": "eri-Botechia <botechia94.erika@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/eri-Botechia/projeto-web-usina/issues"
+  },
+  "homepage": "https://github.com/eri-Botechia/projeto-web-usina#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.1",
+    "mongoose": "^8.8.2",
+    "nodemon": "^3.1.7"
+  }
+}

@@ -1,0 +1,22 @@
+{
+    
+    "posts": [
+         {
+             "id": "posttM-p0000",
+             "title": "TITULO-DO-POST",
+             "BASE_URL": "http://localhost:3000",
+             "root": "/",
+             "httpMethod": "GET",
+             "response":"text/html", 
+             "status_code":200,
+             "description": "Endpoint com o metodo http GET em endpoiit ${BASE_URL}/ Respeite o endpoint e metodo para testar em postaman" ,
+                "is_key_blog": "NO",
+                "is_key_comments": "NO",
+                "is_key_calendar": "NO",
+                "is_key_endpoints": "post-tM-p0000",
+                "is_key_posts": "NO",
+                "is_key_products": "NO"
+
+         }
+    ]
+}
