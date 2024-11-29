@@ -1,0 +1,13 @@
+[
+    [{
+        "mainEndpoints":[{
+        "endpoint": "/",
+        "description": "Home page"
+    },
+    {
+        "endpoint": "/about",
+        "description": "About page"
+    }
+   ]
+    }]
+]

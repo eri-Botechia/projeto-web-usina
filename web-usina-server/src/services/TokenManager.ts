@@ -1,23 +1,15 @@
 import jwt from 'jsonwebtoken'
 import dotenv from 'dotenv'
+import { ROLES } from '../enums/enums'
 dotenv.config()
 
-export enum USER_ROLES{
-    NORMAL="NORMAL",
-    ADMIN = "ADMIN",
-    BUYER="BUYER",
-    EMPLOYER="EMPLOYER",
-    OWNER="OWNER",
-    STUDENT="STUDENT",
-    INSTRUCTOR="INSTRUCTOR"
-}
 
 
 
 export interface TokenPayload {
     id: string,
     name: string,
-    role: USER_ROLES
+    role:ROLES
 } // realocar para o arquivo da entidade User
 
 export class TokenManager {

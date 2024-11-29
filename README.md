@@ -1,6 +1,6 @@
-# projet-usina-eco-cultural-pii-imt
+# projet-usina-web-pii-imt
 
-## Projeto Usina ECO-CULTURAL in building process ⚠️
+## Projeto Usina web in building process ⚠️
 
 ### DOCUMENTACAO
 
@@ -10,14 +10,14 @@
 ### REPO STEP #02 - MAKETADO (diretorio __maketado__)
 - Maketacao simples de design de projeto usando html, css, js
 
-### REPO STEP #03 - Projeto USINA ECO-CULTURAL (diretorio __projeto-usina-eco-cultural__)
+### REPO STEP #03 - Projeto USINA web (diretorio __projeto-usina-web__)
 -  Lancamento do projeto para deploy
 
 Para cada step do projeto, referente aos diretorios listados, se encontra um README.md da segmentacao explicando o processo. 
 - Documentacao 
 - Deseign
 - Maketado 
-- Projeto-usina-eco-cultural
+- Projeto-usina-web
 
 
 ### Aluno Autor: 

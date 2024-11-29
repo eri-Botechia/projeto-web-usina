@@ -1,9 +1,11 @@
-import express from 'express';
 import { Router } from 'express';
-import * as  apiController from '../../controllers/api/apiController';
-const router = express.Router();
+import { createPost, getIndex, getParamsById, getAndDeleteById } from '../../controllers/api/apiController';
 
+const router = Router();
 
-router.get('/', apiController.getSlash);
+router.post('/endpoints', createPost);
+router.get('/', getIndex);
+router.put('/:endpoint', getParamsById);
+router.delete('/:endpoint', getAndDeleteById);
 
 export default router;

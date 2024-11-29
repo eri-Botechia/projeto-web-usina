@@ -3,12 +3,14 @@ export class Post {
 
 
     private id:string|undefined;
+    private tagTile: sting;
+
 
     constructor(id:string|null){
         this.id=this.checkIdExists(id);
     }
 
-    private checkIdExists(id:string|null):string{
+    private checkIdExists(id:string|null, tagTitle:string|undefined):string{
         if(id==null){
             return new IdGenerator().generate();
         }

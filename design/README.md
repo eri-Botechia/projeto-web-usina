@@ -1,6 +1,6 @@
-## Projeto Usina ECO-CULTURAL in building process ⚠️
+## Projeto Usina web in building process ⚠️
 
-# DESIGN (Projeto Usina ECO-CULTURAL)
+# DESIGN (Projeto Usina web)
 Está separado em 3 diretórios principais:
 1. pages
 2. partials
