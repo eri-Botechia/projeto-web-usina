@@ -10,8 +10,6 @@ const morgan_1 = __importDefault(require("morgan"));
 const path_1 = __importDefault(require("path"));
 const mainRouter_1 = __importDefault(require("../routes/mainRouter"));
 const apiRouter_1 = __importDefault(require("../routes/api/apiRouter"));
-const usersRouter_1 = __importDefault(require("../routes/api/usersRouter"));
-const docsRouter_1 = __importDefault(require("../routes/docs/docsRouter"));
 class Server {
     constructor() {
         this.mainPaths = {
@@ -19,11 +17,6 @@ class Server {
         };
         this.apiPaths = {
             api: '/api',
-            users: '/api/users',
-            posts: '/api/posts'
-        };
-        this.docsPaths = {
-            docs: '/docs'
         };
         this.app = (0, express_1.default)();
         this.port = `${Number(process.env.PORT) || 3000}`;
@@ -41,9 +34,7 @@ class Server {
     }
     routes() {
         this.app.use(this.apiPaths.api, apiRouter_1.default);
-        this.app.use(this.apiPaths.users, usersRouter_1.default);
         this.app.use(this.mainPaths.main, mainRouter_1.default);
-        this.app.use(this.docsPaths.docs, docsRouter_1.default);
     }
     listen() {
         this.app.listen(this.port, () => {

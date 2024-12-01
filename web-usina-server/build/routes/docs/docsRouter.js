@@ -29,6 +29,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const docsController = __importStar(require("../../controllers/docs/docsController"));
 const router = express_1.default.Router();
-router.get('/', docsController.getSlash);
+router.get('/', docsController.getDocsCollection);
 exports.default = router;
 //# sourceMappingURL=docsRouter.js.map

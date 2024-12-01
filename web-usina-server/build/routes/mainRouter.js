@@ -29,6 +29,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const mainController = __importStar(require("../controllers/mainController"));
 const router = express_1.default.Router();
-router.get('/', mainController.getSlash);
+router.get('/', mainController.getMainCollection);
 exports.default = router;
 //# sourceMappingURL=mainRouter.js.map
