@@ -1,5 +1,7 @@
 import { Request, Response } from "express";
 
-export const getSlash = async(req: Request, res: Response) => {
-    res.status(200).json({message: 'DOCS Slash'});	
+export const getDocsCollection = async(req: Request, res: Response) => {
+    res.status(200).send('DOCS Collection');	
 };
+
+

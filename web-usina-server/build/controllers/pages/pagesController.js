@@ -9,9 +9,13 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.getMainCollection = void 0;
-const getMainCollection = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+exports.getColetivo = exports.getHome = void 0;
+const getHome = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     res.status(200).sendFile('index.html', { root: 'public' });
 });
-exports.getMainCollection = getMainCollection;
-//# sourceMappingURL=mainController.js.map
+exports.getHome = getHome;
+const getColetivo = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    res.status(200).sendFile('pages/coletivo.html', { root: 'public' });
+});
+exports.getColetivo = getColetivo;
+//# sourceMappingURL=pagesController.js.map
