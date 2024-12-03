@@ -47,7 +47,7 @@
                                 <nav class="offcanvas-body">
                                     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                                         <li class="nav-item">
-                                            <a href="/../" class="nav-link active text-dark" aria-current="page"
+                                            <a href="/../pages" class="nav-link active text-dark" aria-current="page"
                                                 id="navBtn0">HOME</a>
                                         </li>
                                         <li class="nav-item">
@@ -63,28 +63,30 @@
                                                 id="navBtn3">BLOG</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="/pages/eventos" class="nav-link active text-dark"
-                                                aria-current="page" id="navBtn4">PARTICIPE</a>
+                                            <a href="/pages/agenda" class="nav-link active text-dark"
+                                                aria-current="page" id="navBtn4">AGENDA</a>
                                         </li>
+
                                         <li class="nav-item">
                                             <a href="/pages/doe" class="nav-link active text-dark" aria-current="page"
                                                 id="navBtn5">DOE</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="/pages/produtos" class="nav-link active text-dark"
-                                                aria-current="page" id="navBtn6"> NOSSOS PRODUTOS</a>
+                                            <a href="/pages/loja" class="nav-link active text-dark" aria-current="page"
+                                                id="navBtn6">NOSSA LOJA</a>
                                         </li>
+
                                         <li class="nav-item">
                                             <a href="/pages/apoio-e-patrocinio" class="nav-link active text-dark"
                                                 aria-current="page" id="navBtn7">APOIO E PATROCINIO</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="pages/contato" class="nav-link active text-dark"
+                                            <a href="/pages/contato" class="nav-link active text-dark"
                                                 aria-current="page" id="navBtn8">CONTATO</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="users/sign-in" class="nav-link active text-dark"
-                                                aria-current="page" id="navBtn9">LOGIN</a>
+                                            <a href="/pages/login" class="nav-link active text-dark" aria-current="page"
+                                                id="navBtn9">LOGIN</a>
                                         </li>
                                     </ul>
                                 </nav>
@@ -104,94 +106,109 @@
                             <span class="text-secondary font-weight-bold">NEWSLETTER ECO-CULTURAL</span>
                             <button class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
                         </div>
-                    </div>
-                    <div class="modal-body">
-                        <div class="modal-body-header">
-                            <span><strong class="font-weight-bold text-secondary">É GRÁTIS</strong>, receber noticias no
-                                e-mail com o:</span>
-                            <br />
-                            <h5> <strong class="font-weight-bold text-success">NEWSLETTER ECO-CULTURAL </strong></h5>
-                            <p class="small text-secondary">Prencha o Formulário para receber todas as novidades em
-                                forma de boletim de notícias em seu e-mail e nos ajude a saber como nos conheceu!</p>
-                        </div>
-                        <div class="modal-body-content">
-                            <form>
-                                <div class="form-group">
-                                    <label for="inputReceiverUser">Nome</label>
-                                    <input type="email" class="form-control" id="inputReceiverUser"
-                                        name="inputReceiverUser" aria-describedby="emailHelp"
-                                        placeholder="ex: 'John Doe'">
-                                </div>
-                                <div class="form-group">
-                                    <label for="inputReceiverEmail">Email</label>
-                                    <input type="email" class="form-control" id="inputReceiverEmail"
-                                        name="inputReceiverEmail" aria-describedby="emailHelp"
-                                        placeholder="ex: 'john.doe@google.com'">
-                                </div>
-                                <div class="form-group my-4">
-                                    <p>Como você nos encontrou?</p>
-                                    <div class="container">
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="checkbox" id="meetUsLinkedin"
-                                                value="linkedin" checked=false>
-                                            <label class="form-check-label" for="meetUsLinkedin">Linkedin</label>
-                                        </div>
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="checkbox" id="meetUsFacebook"
-                                                value="facebook" checked=false>
-                                            <label class="form-check-label" for="meetUsFacebook">Facebook</label>
+                        <div class="modal-body">
+                            <div class="modal-body-header">
+                                <span><strong class="font-weight-bold text-secondary">É GRÁTIS</strong>, receber
+                                    noticias no
+                                    e-mail com o:</span>
+                                <br />
+                                <h5><strong class="font-weight-bold text-success">NEWSLETTER ECO-CULTURAL</strong></h5>
+                                <p class="small text-secondary">Prencha o Formulário para receber todas as novidades em
+                                    forma de boletim de notícias em seu e-mail e nos ajude a saber como nos conheceu!
+                                </p>
+                            </div>
+                            <div class="modal-body-content">
+                                <form>
+                                    <div class="form-group">
+                                        <label for="inputReceiverUser">Nome</label>
+                                        <input type="text" class="form-control" id="inputReceiverUser"
+                                            name="inputReceiverUser" aria-describedby="nameHelp"
+                                            placeholder="ex: 'John Doe'">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputReceiverEmail">Email</label>
+                                        <input type="email" class="form-control" id="inputReceiverEmail"
+                                            name="inputReceiverEmail" aria-describedby="emailHelp"
+                                            placeholder="ex: 'john.doe@google.com'">
+                                    </div>
+                                    <div class="form-group my-4">
+                                        <label for="inputReceiverMeetUsBy">Como você nos encontrou?</label>
+                                        <div class="container">
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="checkbox" id="meetUsLinkedin"
+                                                    value="linkedin">
+                                                <label class="form-check-label" for="meetUsLinkedin">Linkedin</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="checkbox" id="meetUsFacebook"
+                                                    value="facebook">
+                                                <label class="form-check-label" for="meetUsFacebook">Facebook</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="checkbox" id="meetUsCommunity"
+                                                    value="community">
+                                                <label class="form-check-label" for="meetUsCommunity">COMUNIDADE</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="checkbox" id="meetUsAtWork"
+                                                    value="work">
+                                                <label class="form-check-label" for="meetUsAtWork">COLEGA DE
+                                                    TRABALHO</label>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="form-group">
-                                    <button type="submit" class="btn btn-primary mt-4 mb-4 mx-2">Enviar</button>
-                                    <button type="reset" class="btn btn-danger mt-4 mb-4 mx-2">Limpar Dados</button>
-                                </div>
-                            </form>
+                                    <div class="form-group">
+                                        <button type="submit" class="btn btn-primary mt-4 mb-4 mx-2">Enviar</button>
+                                        <button type="reset" class="btn btn-danger mt-4 mb-4 mx-2">Limpar Dados</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-body-footer">
+                                <small id="emailHelp" class="form-text text-muted">É PRIVADO, seus dados estão seguros e
+                                    não
+                                    são compartilhados.</small>
+                            </div>
                         </div>
-                        <div class="modal-body-footer">
-                            <small id="emailHelp" class="form-text text-muted">É PRIVADO, seus dados estão seguros e não
-                                são compartidos.</small>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <div class="list-social">
-                            <a href="https://www.google.com" target="_blank" rel="noopener noreferrer"
-                                class="link-social"><i class="fa-brands fa-instagram"></i></a>
-                            <a href="https://www.google.com" target="_blank" rel="noopener noreferrer"
-                                class="link-social"><i class="fa-brands fa-instagram"></i></a>
-                            <a href="https://www.google.com" target="_blank" rel="noopener noreferrer"
-                                class="link-social"><i class="fa-brands fa-instagram"></i></a>
-                            <a href="https://www.google.com" target="_blank" rel="noopener noreferrer"
-                                class="link-social"><i class="fa-brands fa-instagram"></i></a>
+                        <div class="modal-footer">
+                            <div class="list-social">
+                                <a href="https://www.google.com" target="_blank" rel="noopener noreferrer"
+                                    class="link-social"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="https://www.google.com" target="_blank" rel="noopener noreferrer"
+                                    class="link-social"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="https://www.google.com" target="_blank" rel="noopener noreferrer"
+                                    class="link-social"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="https://www.google.com" target="_blank" rel="noopener noreferrer"
+                                    class="link-social"><i class="fa-brands fa-instagram"></i></a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
             <section class="container-fluid bg-light section-content">
                 <div class="container">
-                    <div class="row">
-                        <div class="col">
-                            <div id="idContent-0"></div>
-                        </div>
+                    <div class="row bg-light">
+                        <div id="idContent-0"></div>
                     </div>
                 </div>
             </section>
         </main>
         <footer class="fixed fixed-bottom bg-light p-4 container-fluid">
             <div class="container">
+                <!--AQUI VAI BOTAO DO MODAL-->
                 <div class="container">
                     <div class="row">
                         <div class="col">
                             <button class="btn btn-orange" data-bs-toggle="modal" data-bs-target="#modalNewsletter">
                                 Click <string>NEWSLETTER</string>
                             </button>
+                            <!--O DIV DO MODAL FOI INSERIDO COMO PRIMEIRA PARTE DO MAIN PARA PODER TER UM Z-INDEX FUNCIONAL-->
                         </div>
                     </div>
                 </div>
             </div>
         </footer>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>

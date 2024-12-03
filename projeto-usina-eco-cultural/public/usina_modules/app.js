@@ -8,42 +8,47 @@ const getElementPageHtml = () => {
         return elementPageHtml;
     } else {
         let elementPageHtml;
+        /*export const templates = [ SchedulePage, SupporterPage, LojinhaPage,  SupportersPage, ContatoPage, LoginPage];*/
+
         switch (split2Confirm) {
             case "usina":
-                elementPageHtml = "idContent-0";
-                return elementPageHtml;
-            case "coletivo":
                 elementPageHtml = "idContent-1";
                 return elementPageHtml;
-            case "timeline":
+            case "coletivo":
                 elementPageHtml = "idContent-2";
                 return elementPageHtml;
-            case "blog":
+            case "timeline":
                 elementPageHtml = "idContent-3";
                 return elementPageHtml;
-            case "eventos":
+            case "blog":
                 elementPageHtml = "idContent-4";
                 return elementPageHtml;
-            case "doe":
+            case "agenda":
                 elementPageHtml = "idContent-5";
                 return elementPageHtml;
-            case "produtos":
+            case "loja":
                 elementPageHtml = "idContent-6";
                 return elementPageHtml;
-            case "apoio-e-patrocinio":
+            case "doar":
                 elementPageHtml = "idContent-7";
                 return elementPageHtml;
-            case "contatos":
+            case "apoio-e-patrocinio":
                 elementPageHtml = "idContent-8";
                 return elementPageHtml;
-            case "sign-in":
+            case "contact":
                 elementPageHtml = "idContent-9";
                 return elementPageHtml;
-            case "sign-up":
+            case "login":
                 elementPageHtml = "idContent-10";
                 return elementPageHtml;
-            default:
+            case "recovery":
                 elementPageHtml = "idContent-11";
+                return elementPageHtml;
+            case "registration":
+                elementPageHtml = "idContent-12";
+                return elementPageHtml;
+            default:
+                elementPageHtml = "idContent-0";
                 return elementPageHtml;
         }
     }

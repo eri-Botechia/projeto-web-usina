@@ -105,3 +105,12 @@ export const getPage11 = async(req, res, next) => {
         next(createHttpError(500, 'Internal Server Error'));
     }
 }
+
+export const getPage12 = async(req, res, next) => {
+    try {
+
+        res.sendFile('pages/page-12.html', { root: "public" });
+    } catch (error) {
+        next(createHttpError(500, 'Internal Server Error'));
+    }
+}
