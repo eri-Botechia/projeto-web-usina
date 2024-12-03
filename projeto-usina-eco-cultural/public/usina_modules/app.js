@@ -1,80 +1,67 @@
-const getElementHTML = (getLocationPath) => {
+import { templates } from './templates/pages/pages.js';
+
+const getElementPageHtml = () => {
+    const getLocationPath = window.location.href;
     const split2Confirm = getLocationPath.split('/').pop();
     if (split2Confirm === "/") {
-        const elementHTML = "idContent-0"
-        return elementHTML
+        let elementPageHtml = "idContent-0";
+        return elementPageHtml;
     } else {
-        let elementHtml;
+        let elementPageHtml;
         switch (split2Confirm) {
+            case "usina":
+                elementPageHtml = "idContent-0";
+                return elementPageHtml;
             case "coletivo":
-                elementHtml = "idContent-1"
-                return elementPageHtml
-                break;
+                elementPageHtml = "idContent-1";
+                return elementPageHtml;
             case "timeline":
-                elementHtml = "idContent-2";
-                return elementPageHtml
-                break;
+                elementPageHtml = "idContent-2";
+                return elementPageHtml;
             case "blog":
-                elementHtml = "idContent-3"
-                return elementPageHtml
-                break;
+                elementPageHtml = "idContent-3";
+                return elementPageHtml;
             case "eventos":
-                elementHtml = "idContent-4";
-                return elementPageHtml
-                break;
+                elementPageHtml = "idContent-4";
+                return elementPageHtml;
             case "doe":
-                elementHtml = "idContent-5"
-                return elementPageHtml
-                break;
+                elementPageHtml = "idContent-5";
+                return elementPageHtml;
             case "produtos":
-                elementHtml = "idContent-6";
-                return elementPageHtml
-                break;
+                elementPageHtml = "idContent-6";
+                return elementPageHtml;
             case "apoio-e-patrocinio":
-                elementHtml = "idContent-7"
-                return elementPageHtml
-                break;
+                elementPageHtml = "idContent-7";
+                return elementPageHtml;
             case "contatos":
-                elementHtml = "idContent-8";
-                return elementPageHtml
-                break;
+                elementPageHtml = "idContent-8";
+                return elementPageHtml;
             case "sign-in":
-                elementHtml = "idContent-9";
-                return elementPageHtml
-                break;
+                elementPageHtml = "idContent-9";
+                return elementPageHtml;
             case "sign-up":
-                elementHtml = "idContent-10";
-                return elementPageHtml
-                break;
+                elementPageHtml = "idContent-10";
+                return elementPageHtml;
             default:
-                elementHtml = "idContent-11";
-                return elementPageHtml
-                break;
+                elementPageHtml = "idContent-11";
+                return elementPageHtml;
         }
     }
 }
 
-const getAndSetCurrentLocation = (getLocationPath, templates) => {
-    const getLocationPath = window.location.href
-    const element2Get = getElementHTML(getLocationPath)
-    const templateOrder = Number(element2Get.split("-").pop())
-    const element2Set = document.getElementById(element2Get)
-    element2Set.innerHTML = templates[templateOrder]
-
+const getAndSetCurrentLocation = () => {
+    const element2Get = getElementPageHtml();
+    const templateOrder = Number(element2Get.split("-").pop().toString());
+    console.log(element2Get);
+    console.log(templateOrder);
+    let element2Set = document.getElementById(element2Get);
+    if (element2Set) {
+        element2Set.innerHTML = templates[templateOrder];
+    } else {
+        console.error(`Element with ID ${element2Get} not found.`);
+    }
 }
 
-
-const onLoad = (templates) => {
-    const getLocationPath = window.location.href
-    document.addEventListener("DOMContentLoaded", () => {
-        getAndSetCurrentLocation(getLocationPath, templates)
-    })
-}
-
-const executeOnLoad = onLoad(templates)
-
-const main = () => {
-    executeOnLoad()
-}
-
-main()
+document.addEventListener("DOMContentLoaded", () => {
+    getAndSetCurrentLocation();
+});

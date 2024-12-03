@@ -1,4 +1,13 @@
 import path from 'path';
+export const getPage0 = async(req, res, next) => {
+    try {
+
+        res.sendFile('pages/page-0.html', { root: "public" });
+    } catch (error) {
+        next(createHttpError(500, 'Internal Server Error'));
+    }
+}
+
 
 export const getPage1 = async(req, res, next) => {
     try {
