@@ -9,9 +9,9 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.getSlash = void 0;
-const getSlash = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    res.status(200).json({ message: 'DOCS Slash' });
+exports.getDocsCollection = void 0;
+const getDocsCollection = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    res.status(200).send('DOCS Collection');
 });
-exports.getSlash = getSlash;
+exports.getDocsCollection = getDocsCollection;
 //# sourceMappingURL=docsController.js.map

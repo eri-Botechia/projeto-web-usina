@@ -5,9 +5,7 @@ import path from 'path';
 import mainRouter from '../routes/mainRouter';
 
 import apiRouter from '../routes/api/apiRouter';
-import usersRouter from '../routes/api/usersRouter';
 
-import docsRouter from '../routes/docs/docsRouter';
 
 /*Esse é o modelo de servidor a ser usado em index*/ 
 
@@ -19,12 +17,6 @@ export class Server {
     }
     private apiPaths = {
         api: '/api',
-        users: '/api/users',
-        posts: '/api/posts'
-    };
-
-    private docsPaths = {
-        docs: '/docs'
     };
 
     constructor() {
@@ -56,11 +48,8 @@ export class Server {
 
     routes() {
         this.app.use(this.apiPaths.api, apiRouter)
-
-        this.app.use(this.apiPaths.users, usersRouter);
+;
         this.app.use(this.mainPaths.main, mainRouter);
-
-        this.app.use(this.docsPaths.docs, docsRouter);
     }
 
     listen() {

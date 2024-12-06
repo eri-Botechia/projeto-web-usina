@@ -1,3 +1,4 @@
+/* pode ser ampliado segundo necessidade do parceiro*/
 export enum ROLES{
     ROLE_1 = 'idealizador',
     ROLE_2 = 'admin',
@@ -6,6 +7,9 @@ export enum ROLES{
     ROLE_5= 'cadastrado',
 }
 
+
+/* pode ser ampliado segundo necessidade do parceiro*/
+/* em caso de pots deve ser implementado um mongo ou json server local*/
 export enum POST_CATEGORIES {
     BLOG="BLOG",
     EVENTOS="EVENTOS",

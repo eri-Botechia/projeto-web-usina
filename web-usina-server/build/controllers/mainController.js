@@ -9,9 +9,9 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.getSlash = void 0;
-const getSlash = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+exports.getMainCollection = void 0;
+const getMainCollection = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     res.status(200).sendFile('index.html', { root: 'public' });
 });
-exports.getSlash = getSlash;
+exports.getMainCollection = getMainCollection;
 //# sourceMappingURL=mainController.js.map
