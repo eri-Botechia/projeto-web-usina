@@ -1,6 +1,6 @@
 export const HeroDefault = `
           <!--fim do HEADER NAVBAR-->
-        <section class="container hero pb-4">
+        <div class="container hero pb-4">
         
             <div class="hero-content pb-4">
               <div class="pl-4  pb-4 rounded text-body-emphasis bg-light">
@@ -18,12 +18,13 @@ export const HeroDefault = `
                   <p>Bem-vindos a WEB PAGE da nossa Usina, nossa transformação, nosso Ipiranga!</p>
            
 
-             <div class="d-flex align-content-start justify-content-start">
-
-    <a href="pages/blog" class="btn btn-hero">BLOG</a>
-    <a href="pages/agenda" class="btn btn-hero">AGENDA</a>
-    <a href="pages/loja" class="btn btn-hero">LOJA</a>
-  
+<div class="btn-hero-container">
+    <a href="pages/usina" class="btn btn-hero">A USINA</a>
+        <a href="pages/coletivo" class="btn btn-hero">O COLETIVO</a>
+    <a href="pages/blog" class="btn btn-hero"> BLOG </a>
+        <a href="pages/doar" class="btn btn-hero"> DOE </a>
+      <a href="pages/eventos" class="btn btn-hero"> EVENTOS </a>
+    <a href="pages/contact" class="btn btn-hero"> CONTATO </a>
                  </div>
                 </div>
                   </div>
@@ -85,7 +86,7 @@ export const HeroDefault = `
           </div>
           </div>
         </div>
-        </section>
+        </div>
 
 
 `

@@ -1,6 +1,6 @@
 import {renderApp } from "./templates/index.js";
-import { HomePage } from "./templates/pages/homePage.js";
-import { ColetivoPage } from "./templates/pages/coletivoPage.js";
+import { HomePage } from "./usina_modules/templates/pages/homePage.js";
+import { ColetivoPage } from "./usina_modules/templates/pages/coletivoPage.js";
 
 
 const options2Render = (currentPage)=>{
