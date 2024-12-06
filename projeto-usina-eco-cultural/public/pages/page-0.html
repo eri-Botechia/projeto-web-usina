@@ -4,23 +4,20 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="./../stylesheets/font-awesome.min.css"/>
+ <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+2:wght@100..900&display=swap" rel="stylesheet">
     <title>USINA ECO-CULTURAL</title>
     <link rel="stylesheet" href="./../stylesheets/normalize.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="./../stylesheets/globals.css">
+       <link rel="stylesheet" href="./../stylesheets/bootstrap.min.css">
+ <link rel="stylesheet" href="./../stylesheets/globals.css">
     <link rel="stylesheet" href="./../stylesheets/medias.css">
 </head>
 
 <body>
     <div class="page">
-        <header class="header container-fluid bg-light pb-5 pt-4" id="idA">
+        <header class="header container bg-light pb-5 pt-4" id="idA">
             <!--inicio HEADER NAVBAR-->
             <div class="navbar fixed-top bg-light bg-body-tertiary container">
                 <div class="navbar navbar-dark bg-light fixed-top">
@@ -47,13 +44,15 @@
                                 <nav class="offcanvas-body">
                                     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                                         <li class="nav-item">
-                                            <a href="/../pages" class="nav-link active text-dark" aria-current="page"
+                                            <a href="/../" class="nav-link active text-dark" aria-current="page"
                                                 id="navBtn0">HOME</a>
                                         </li>
                                         <li class="nav-item">
                                             <a href="/../pages/coletivo" class="nav-link active text-dark"
                                                 aria-current="page" id="navBtn1">O COLETIVO</a>
-                                        </li>
+                                        </li>                    <li class="nav-item">
+                      <a href="/../pages/projects" class="nav-link active text-dark" aria-current="page" id="navBtn0">PROJETOS EDUCACIONAIS</a>
+                    </li>
                                         <li class="nav-item">
                                             <a href="/../pages/timeline" class="nav-link active text-dark"
                                                 aria-current="page" id="navBtn2">USINA NO TEMPO</a>
@@ -96,7 +95,7 @@
                 </div>
             </div>
         </header>
-        <main class="container-fluid bg-light">
+        <main class="container-fluid ">
             <section class="modal" id="modalNewsletter" tabindex="-1" aria-hidden="true"
                 aria-labelledby="label-modal-1">
                 <div class="modal-dialog">
@@ -184,13 +183,11 @@
                     </div>
                 </div>
             </section>
-            <section class="container-fluid bg-light section-content">
+            <div class="container-fluid">
                 <div class="container">
-                    <div class="row bg-light">
                         <div id="idContent-0"></div>
-                    </div>
                 </div>
-            </section>
+            </div>
         </main>
         <footer class="fixed fixed-bottom bg-light p-4 container-fluid">
             <div class="container">
@@ -208,10 +205,7 @@
             </div>
         </footer>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
+    <script src="./../js/bootstrap.bundle.min.js"></script>
     <script type="module" src="./../usina_modules/app.js"></script>
 </body>
 

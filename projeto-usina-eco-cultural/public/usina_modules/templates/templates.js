@@ -8,7 +8,7 @@ import { SchedulePage } from "./pages/schedulePage.js";
 import { SupporterPage } from "./pages/supporterPage.js";
 import { SupportersPage } from "./pages/supportersPage.js";
 import { TimelinePage } from "./pages/timelinePage.js";
-
+import { Navbar4Index } from "./partials/Navbar.js";
 const renderApp = (data2Inject) => {
     const { targetId, template } = data2Inject;
     const targetHTML = document.getElementById(targetId);
@@ -109,7 +109,13 @@ export const renderTemplates = () => {
         template: HomePage
     };
 
+    const dataIndex ={
+        navbar: Navbar4Index,
+        location: 'navbar-location'
+    }
+
     document.addEventListener('DOMContentLoaded', () => {
+        document.getElementById(dataIndex.location).innerHTML = dataIndex.navbar
         renderApp(dataDefault);
         renderViews();
     });
