@@ -23,7 +23,8 @@ jobs:
         node-version: ${{ matrix.node-version }}
 
     - name: Build
-      run: cd ./projeto-web-usina/
+      run: |
+        cd ./projeto-usina-eco-cultural/
         npm install
         cd public/index.html
         npm run start
