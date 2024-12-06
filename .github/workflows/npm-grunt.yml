@@ -4,7 +4,7 @@ on:
   push:
     branches: [ "main" ]
   pull_request:
-    branches: [ "new-5-branch" ]
+    branches: [ "brunch-bugfix-and-make-front" ]
 
 jobs:
   build:
@@ -23,6 +23,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
 
     - name: Build
-      run: cd projeto-web-usina|
+      run: cd ./projeto-web-usina/
         npm install
-        grunt
+        cd public/index.html
+        npm run start
