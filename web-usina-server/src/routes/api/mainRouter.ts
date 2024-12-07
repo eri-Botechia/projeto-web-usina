@@ -4,6 +4,6 @@ import * as  mainController from '../../controllers/mainController';
 const router = express.Router();
 
 
-router.get('/', mainController.getSlash);
+router.get('/', mainController.getMainCollection);
 
 export default router;

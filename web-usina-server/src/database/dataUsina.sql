@@ -1,6 +1,47 @@
-CREATE TABLE ROLES (
-    id VARCHAR(100) NOT NULL PRIMARY KEY UNIQUE,
-    role VARCHAR(100) NOT NULL UNIQUE
+
+CREATE TABLE users(
+     id INTEGER PRIMARY KEY AUTOINCREMENT UNIQUE NOT NULL,
+     nome_completo VARCHAR(600) NOT NULL,
+     email_recovery VARCHAR(200) NOT NULL UNIQUE,
+     username VARCHAR(20) NOT NULL UNIQUE,
+     password_hash VARCHAR(120) NOT NULL
+     is_alive INTEGER NOT NULL DEFAULT 1,
+     created_at VARCHAR(30) NOT NULL DEFAULT (DATETIME('NOW'));
+     updated_at VARCHAR(30) NOT NULL DEFAULT (DATETIME('NOW'));
+);
+
+CREATE TABLE ROLES(
+        id INTEGER PRIMARY KEY AUTOINCREMENT UNIQUE NOT NULL,
+        role VARCHAR(20) NOT NULL UNIQUE
+);
+CREATE TABLE AGENDAS (
+     id INTEGER PRIMARY KEY AUTOINCREMENT UNIQUE NOT NULL,
+     tagAgenda VARCHAR(60) NOT NULL,
+)
+
+CREATE TABLE REPORT_CAUSES(
+        id INTEGER PRIMARY KEY AUTOINCREMENT UNIQUE NOT NULL,
+        report_id VARCHAR(600) NOT NULL,
+);
+
+
+
+
+CREATE TABLE dashboards(
+        id INTEGER PRIMARY KEY AUTOINCREMENT UNIQUE NOT NULL,
+        key VARCHAR(180) NOT NULL UNIQUE,
+        user_id INTEGER NOT NULL,
+        roles_id INTEGER NOT NULL DEFAULT 1,
+        agendas_id INTEGER DEFAULT NULL,
+        REPORT_CAUSES_id INTEGER DEFAULT NULL,
+        FOREIGN KEY(user_id) REFERENCES users(id),
+        ON UPDATED CASCADE ON DELETE CASCADE,
+        FOREIGN KEY(roles_id) REFERENCES roles(id),
+        ON UPDATED CASCADE ON DELETE CASCADE
+        FOREIGN KEY(agendas_id) REFERENCES agendas(id),
+        ON UPDATED CASCADE ON DELETE CASCADE,
+        FOREIGN KEY(REPORT_CAUSES_id) REFERENCES REPORT_CAUSES(id),
+        ON UPDATED CASCADE ON DELETE CASCADE
 );
 
 INSERT INTO ROLES VALUES
@@ -15,11 +56,11 @@ SELECT * FROM ROLES;
 
 
 CREATE TABLE countries(
-    code VARCHAR(2) NOT NULL PRIMARY KEY UNIQUE,
-    name VARCHAR(100) NOT NULL UNIQUE
+    ISO VARCHAR(2) NOT NULL PRIMARY KEY UNIQUE,
+    country VARCHAR(100) NOT NULL UNIQUE
 );
 
-INSERT INTO countries (code, name)
+INSERT INTO countries (ISO, country)
 VALUES
 ('AF', 'Afghanistan'),
 ('AX', 'Aland Islands'),
@@ -271,14 +312,14 @@ VALUES
 
     CREATE TABLE states (
         UF VARCHAR(2) NOT NULL PRIMARY KEY UNIQUE,
-        name VARCHAR(100) NOT NULL UNIQUE,
-        code_id VARCHAR(2) NOT NULL,
-        FOREIGN KEY (code_id) REFERENCES countries(code)
+        state VARCHAR(100) NOT NULL UNIQUE,
+        ISO_countries VARCHAR(2) NOT NULL,
+        FOREIGN KEY (ISO_countries) REFERENCES countries(ISO)
         ON UPDATE CASCADE ON DELETE CASCADE
     );
 
 
-    INSERT INTO states (UF, name, code_id)
+    INSERT INTO states (UF, state, ISO_countries)
 VALUES
 ('AC', 'Acre', 'BR'),
 ('AL', 'Alagoas', 'BR'),
@@ -309,13 +350,13 @@ VALUES
 ('TO', 'Tocantins', 'BR');
 
 
-SELECT states.UF, states.name, states.code_id, countries.name FROM states INNER JOIN countries WHERE countries.code = states.code_id;
+SELECT states.UF, states.name, states.ISO_countries, countries.name FROM states INNER JOIN countries WHERE countries.code = states.ISO_countries;
 
 CREATE TABLE cities (
     id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
-    name VARCHAR(100) NOT NULL,
-    state_id VARCHAR(2) NOT NULL,
-    FOREIGN KEY (state_id) REFERENCES states(UF)
+    city VARCHAR(100) NOT NULL,
+    UF_states VARCHAR(2) NOT NULL,
+    FOREIGN KEY (UF_states) REFERENCES states(UF)
     ON UPDATE CASCADE ON DELETE CASCADE
 );
 
@@ -353,12 +394,12 @@ VALUES
 
 SELECT * FROM cities;
 
-
+-- mais uma correcao feita mediante a concerto de erro inicial proprio
 CREATE TABLE NEIGHBORHOOD   (
     id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
     name VARCHAR(100) NOT NULL,
-    city_id INTEGER NOT NULL,
-    FOREIGN KEY (city_id) REFERENCES cities(id)
+   id_cities INTEGER NOT NULL,
+    FOREIGN KEY (id_cities) REFERENCES cities(id)
     ON UPDATE CASCADE ON DELETE CASCADE
 )
 
@@ -384,181 +425,32 @@ CREATE TABLE locations (
     id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
     address_tag VARCHAR(100) NOT NULL,
     location_id INTEGER NOT NULL,
+    agendas_id INTEGER NOT NULL,
     FOREIGN KEY (location_id) REFERENCES locations(id)
+    ON UPDATE CASCADE ON DELETE CASCADE,
+    FOREIGN KEY (agendas_id) REFERENCES agendas(id)
     ON UPDATE CASCADE ON DELETE CASCADE
 );
 DROP TABLE addresses;
-CREATE TABLE days_of_week(
-    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
-    abvr VARCHAR(3) NOT NULL UNIQUE,
-    day VARCHAR(100) NOT NULL UNIQUE
-);
-
-INSERT INTO days_of_week (abvr, day) VALUES
-    ('DOM', 'Domingo'),
-    ('SEG', 'Segunda-Feira'),
-    ('TER', 'Terça-Feira'),
-    ('QUA', 'Quarta-Feira'),
-    ('QUI', 'Quinta-Feira'),
-    ('SEX', 'Sexta-Feira'),
-    ('SAB', 'Sábado');
-
-DROP TABLE days_of_week;
-CREATE TABLE full_hours (
-    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
-    hour VARCHAR(5) NOT NULL UNIQUE
-);
-drop table full_hours;
-INSERT INTO full_hours (hour) VALUES
-('00:00'),
-('01:00'),
-('02:00'),
-('03:00'),
-('04:00'),
-('05:00'),
-('06:00'),
-('07:00'),
-('08:00'),
-('09:00'),
-('10:00'),
-('11:00'),
-('12:00'),
-('13:00'),
-('14:00'),
-('15:00'),
-('16:00'),
-('17:00'),
-('18:00'),
-('19:00'),
-('20:00'),
-('21:00'),
-('22:00'),
-('23:00');
-
-CREATE TABLE full_minutes (
-    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
-    minute VARCHAR(5) NOT NULL UNIQUE
-);
-
-INSERT INTO full_minutes (minute) VALUES
-('00'),
-('01'),
-('02'),
-('03'),
-('04'),
-('05'),
-('06'),
-('07'),
-('08'),
-('09'),
-('10'),
-('11'),
-('12'),
-('13'),
-('14'),
-('15'),
-('16'),
-('17'),
-('18'),
-('19'),
-('20'),
-('21'),
-('22'),
-('23'),
-('24'),
-('25'),
-('26'),
-('27'),
-('28'),
-('29'),
-('30'),
-('31'),
-('32'),
-('33'),
-('34'),
-('35'),
-('36'),
-('37'),
-('38'),
-('39'),
-('40'),
-('41'),
-('42'),
-('43'),
-('44'),
-('45'),
-('46'),
-('47'),
-('48'),
-('49'),
-('50'),
-('51'),
-('52'),
-('53'),
-('54'),
-('55'),
-('56'),
-('57'),
-('58'),
-('59');
 
 
-CREATE TABLE months_of_year (
-    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
-    abvr VARCHAR(3) NOT NULL UNIQUE,
-    month VARCHAR(20) NOT NULL UNIQUE
-);
-
-INSERT INTO months_of_year (abvr, month) VALUES
-('JAN', 'Janeiro'),
-('FEV', 'Fevereiro'),
-('MAR', 'Março'),
-('ABR', 'Abril'),
-('MAI', 'Maio'),
-('JUN', 'Junho'),
-('JUL', 'Julho'),
-('AGO', 'Agosto'),
-('SET', 'Setembro'),
-('OUT', 'Outubro'),
-('NOV', 'Novembro'),
-('DEZ', 'Dezembro');
-
-CREATE TABLE days_of_month (
-    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
-    day VARCHAR(2) NOT NULL UNIQUE
-);
-
-INSERT INTO days_of_month (day) VALUES
-('01'),
-('02'),
-('03'),
-('04'),
-('05'),
-('06'),
-('07'),
-('08'),
-('09'),
-('10'),
-('11'),
-('12'),
-('13'),
-('14'),
-('15'),
-('16'),
-('17'),
-('18'),
-('19'),
-('20'),
-('21'),
-('22'),
-('23'),
-('24'),
-('25'),
-('26'),
-('27'),
-('28'),
-('29'),
-('30'),
-('31');
-
+-- HAVIA PENSADO EM FAZER A TABELA FULL HOURS
+-- COMO INVERTI O PROCESSO DE DIAGRAMAÇÃO NA CORREÇÃO DE ESTE PASSO QUE EM
+-- REALIDADE É ESSENCIAL PARA O FUNCIONAMENTO DO SISTEMA
+-- NÃO EXISTE A POSSIBILIDADE DE IMPLEMENTAR FULL HOURS DA MANEIRA QUE FOI PROPOSTO 
+-- COM 4 DIGITOS SERIA IMPOSSIVEL HORAS QUEBRADAS PELO QUE OPTEI USAR
+-- STRING COM PADRAO VINDO DE API POR ISOString() sobre const today = new   Date()
+-- O VALOR É EQUIVALENTE AO TIPO (DATETIME('NOW')) DO BANCO SQLITE
+-- O MESMO FOI EMPREGADO COM LINGUAGEM SQL A TRAVÉS DE QUERY BUILDER KNEX PASSO QUE DEVE SER CORRIGIDO PARA ADEQUACAO A MONGO DB USANDO MONGOOSE\
+-- AINDA QUE A MISTURA DE 2 BANCOS (1 RELACIONAL DE ARQUIVO LOCAL COMO SQLITE E UM BANCO DE DADOS NÃO RELACIONAL COMO MONGO, VIRIA PERFEITAMENTE AO SISTEMA FINAL PELA NECESSIDADE DE OCUTACAO DE DADOS SENSIVEIS COMO POR EXEMPLO EM COMPRA UM ENDERECO OU CPF, PRECISO APROFUNDAR O TEMA ANTES DE UMA DECISAO QUE FAÇA O SISTEMA FUNCIONAR BEM 
+--CREATE TABLE full_hours(
+  --  id INTEGER NOT NULL UNIQUE PRIMARY KEY AUTOINCREMENT, 
+  --  hour VARCHAR(5) NOT NULL UNIQUE
+--)
+--drop table full_hours;
+-- FULL MINUTES É O MESMO CASO DE FULL_HOURS, TABELA INECESSARIA CORRECAO REALIZADA NO DIAGRAMA EM REFATORACAO DE CODIGO ONDE TODAS AS TABELAS FORAM APAGADAS PARA A CONSTRUCAO DE UM DB NA ORDEM QUE SE PEDE AS TECNICAS ADEQUADAS E CORRETAS NAO USADAS ANTERIORMENTE
+--CREATE TABLE full_minutes (
+  --  id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+  --  minute VARCHAR(5) NOT NULL UNIQUE
+--);
 

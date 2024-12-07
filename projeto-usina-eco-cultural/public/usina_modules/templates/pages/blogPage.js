@@ -1,6 +1,6 @@
 export const BlogPage = ` 
- <div id="contentId">
-        <div class="row bg-light">
+ <div id="container">
+        <div class="row">
           <section class="col-md-8 p-2">
             <header class="header-section">
             <h3 class="pb-4 mb-4 fst-italic border-bottom">
