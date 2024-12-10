@@ -149,7 +149,7 @@ export const TimelinePage = `
 
   <div class="containerTime left">
     <div class="content">
-    <h2>1968: Inauguração</h2>
+    <h2>1968: INCINERADOR VERGUEIRO</h2>
     <div class="d-flex">
     <div class="col-8">
       <p>O incinerador Vergueiro, localizado no Ipiranga,  <strong>	INICIA SUAS ATIVIDADES</strong> com sua atividade de <strong>INCINERADOR DE LIXO DOMÉSTICO</strong></p>

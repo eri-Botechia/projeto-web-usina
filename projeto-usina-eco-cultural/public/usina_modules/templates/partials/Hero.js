@@ -23,7 +23,7 @@ export const HeroDefault = `
         <a href="pages/coletivo" class="btn btn-hero">O COLETIVO</a>
     <a href="pages/blog" class="btn btn-hero"> BLOG </a>
         <a href="pages/doar" class="btn btn-hero"> DOE </a>
-      <a href="pages/eventos" class="btn btn-hero"> EVENTOS </a>
+      <a href="pages/agenda" class="btn btn-hero"> AGENDA </a>
     <a href="pages/contact" class="btn btn-hero"> CONTATO </a>
                  </div>
                 </div>

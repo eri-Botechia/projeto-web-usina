@@ -30,27 +30,32 @@ html {
     --shadow-route51: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
 }
 
-.color-orange{
+.color-orange {
     color: var(--color-orangeDark);
     font-weight: 900;
 }
 
-.color-green{
+.social-link {
+    text-decoration: none;
+    color: white;
+}
+
+.color-green {
     color: var(--color-green);
     font-weight: 900;
 }
 
-a.color-green{
+a.color-green {
     color: var(--color-green);
     font-weight: 900;
     text-decoration: none;
 }
 
-.rounded-8{
+.rounded-8 {
     overflow: hidden;
 }
 
-.rounded-8 img{
+.rounded-8 img {
     overflow: hidden;
     border-radius: 19px;
     height: 100%;
@@ -59,15 +64,17 @@ a.color-green{
     object-fit: contain;
 }
 
-a.color-green:hover{
+a.color-green:hover {
     color: var(--color-green);
     font-weight: 900;
     text-decoration: underline;
 }
-.bg-green{
+
+.bg-green {
     background: var(--color-green);
     font-weight: 900;
 }
+
 .bgLightPapper {
     background: var(--color-lightPapper) !important;
 }
@@ -227,7 +234,7 @@ textarea {
     background-color: var(--color-orangeDark);
 }
 
-.btn-hero-container{
+.btn-hero-container {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
@@ -235,10 +242,11 @@ textarea {
     gap: 15px;
 }
 
-.usina-list{
+.usina-list {
     list-style-image: url('./../assets/svg/svg004_icon4List.svg')
 }
-.btn-hero{
+
+.btn-hero {
     background-color: var(--color-orangeVivid);
     font-weight: bolder;
     color: var(--color-grayLight);
@@ -249,9 +257,12 @@ textarea {
     margin-left: 10px;
 }
 
-.btn-hero:hover{
+.btn-hero img {
+    padding-right: 1rem;
+}
+
+.btn-hero:hover {
     background-color: var(--color-orangeLight);
-    
 }
 
 .headingH2 {
@@ -270,6 +281,7 @@ textarea {
 }
 
 ;
+
 .btn-container-modal {
     display: flex;
     justify-content: center;
@@ -292,7 +304,6 @@ textarea {
 
 /* sections da main*/
 
-
 footer {
     z-index: 700 !important;
     height: 100%;
@@ -313,12 +324,12 @@ footer {
     align-items: center;
     justify-content: space-around;
     list-style-type: none;
-
     margin-bottom: 80px;
     padding: 1rem 2rem;
 }
 
-.gallery-item, .main ul li {
+.gallery-item,
+.main ul li {
     display: inline-block;
     min-width: 349px;
     max-width: 350px;
@@ -330,19 +341,19 @@ footer {
     border-radius: 22px;
 }
 
-
-.main ul li img{
+.main ul li img {
     width: 100%;
     object-fit: cover;
     border-radius: 22px;
     margin: 30px auto;
 }
+
 .contact-form {
     margin-bottom: 100px;
 }
 
 .timeline {
-    background:  #e98456;
+    background: #e98456;
     margin: 0px auto;
     padding: 2rem;
     border-radius: 10px;
@@ -370,8 +381,6 @@ footer {
 .bgLightCream {
     background: var(--color-lightCream) !important;
 }
-
-
 
 .modal {
     position: fixed;
@@ -454,8 +463,8 @@ textarea {
     text-align: center;
 }
 
-.bgTerracota{
-    background: #e98456!important ;
+.bgTerracota {
+    background: #e98456 !important;
 }
 
 .nav-item:active .nav-link {
@@ -507,6 +516,7 @@ textarea {
 }
 
 ;
+
 .btn-container-modal {
     display: flex;
     justify-content: center;
@@ -529,9 +539,6 @@ textarea {
 
 /* sections da main*/
 
-
-
-
 .gallery-list {
     display: flex;
     flex-flow: row wrap;
@@ -542,14 +549,12 @@ textarea {
     min-height: 110vh;
 }
 
-
-
 .contact-form {
     margin-bottom: 100px;
 }
 
 .timeline {
-    background:  #e98456;
+    background: #e98456;
     margin: 0px auto;
     padding: 2rem;
     border-radius: 10px;
@@ -625,33 +630,30 @@ textarea {
     background: #F2F2F2;
 }
 
-.btn-orange:hover{
-
-    border:2px solid var(--color-orangeDark)!important;  
-
+.btn-orange:hover {
+    border: 2px solid var(--color-orangeDark) !important;
     background-color: var(--color-orangeDark);
 }
 
-
-.spanH2{
-    width:340px;
+.spanH2 {
+    width: 340px;
     margin: 10px 5%;
     text-align: center;
     color: var(--color-orangeDark);
     font-size: 1.4rem;
     align-content: center;
+}
 
-};
-.btn-orange{
+;
+
+.btn-orange {
     border: 2px solid var(--color-orangeLight);
     background-color: var(--color-orangeLight);
 }
 
-.btn-orange:active{
-
+.btn-orange:active {
     background-color: var(--color-orangeDark);
 }
-
 
 footer {
     z-index: 700 !important;
