@@ -1,13 +1,10 @@
-
-CREATE TABLE users(
-     id INTEGER PRIMARY KEY AUTOINCREMENT UNIQUE NOT NULL,
-     nome_completo VARCHAR(600) NOT NULL,
-     email_recovery VARCHAR(200) NOT NULL UNIQUE,
-     username VARCHAR(20) NOT NULL UNIQUE,
-     password_hash VARCHAR(120) NOT NULL
-     is_alive INTEGER NOT NULL DEFAULT 1,
-     created_at VARCHAR(30) NOT NULL DEFAULT (DATETIME('NOW'));
-     updated_at VARCHAR(30) NOT NULL DEFAULT (DATETIME('NOW'));
+CREATE TABLE usuarios (
+   id INTEGER PRIMARY KEY AUTOINCREMENT,
+   nome_completo CHAR NOT NULL,
+   username VARCHAR(18) UNIQUE NOT NULL,
+   is_active_user BLOB (1) DEFAULT 1,
+   created_at VARCHAR(15) DEFAULT (DATETIME('now'),
+   updated_at VARCHAR(15) DEFAULT (DATETIME('now')
 );
 
 CREATE TABLE ROLES(
@@ -308,7 +305,7 @@ VALUES
 ('ZW', 'Zimbabwe');
 
 
-    SELECT * FROM countries;
+SELECT * FROM countries;
 
     CREATE TABLE states (
         UF VARCHAR(2) NOT NULL PRIMARY KEY UNIQUE,
@@ -453,4 +450,3 @@ DROP TABLE addresses;
   --  id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
   --  minute VARCHAR(5) NOT NULL UNIQUE
 --);
-
